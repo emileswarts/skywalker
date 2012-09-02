@@ -1,15 +1,23 @@
 " Maintainer:   Emile Swarts
 " Last Change:  2012/10/04
 " URL: https://github.com/emileswarts/velvet-vim-colourscheme
-"  .    .    . .       .         .    .    . .       . .    .    
-"  .+'|  .'| .+'|=|`+. .+'|      .+'|  .'| .+'|=|`+. .+'|=|`+.=|`+. 
-"  |  |  | | |  | `+.| |  |      |  |  | | |  | `+.| |.+' |  | `+.| 
-"  |  |  | | |  |=|`.  |  |      |  |  | | |  |=|`.       |  |      
-"  |  |  | | |  | `.|  |  |      |  |  | | |  | `.|       |  |      
-"  |  |  | | |  |    . |  |    . |  |  | | |  |    .      |  |      
-"  |  | .+ | |  | .+'| |  | .+'| |  | .+ | |  | .+'|      |  |      
-"  `+.|=|.+' `+.|=|.+' `+.|=|.+' `+.|=|.+' `+.|=|.+' '`'`'`'`'`'`'
-
+"
+"       ...                                                            ..          .         s                          
+"   .x888888hx    :   .uef^'                                         dF           @88>      :8                .uef^'    
+"  d88888888888hxx  :d88E              u.      .u    .              '88bu.        %8P      .88              :d88E       
+" 8' ... `'*8888%`  `888E        ...ue888b   .d88B :@8c       .u    '*88888bu      .      :888ooo       .   `888E       
+"!  '   ` .xnxx.     888E .z8k   888R Y888r ='8888f8888r   ud8888.    ^'*8888N   .@88u  -*8888888  .udR88N   888E .z8k  
+"X X   'H8888888%:   888E~?888L  888R I888>   4888>'88'  :888'8888.  beWE '888L ''888E`   8888    <888'888k  888E~?888L 
+"X 'hn8888888*'   >  888E  888E  888R I888>   4888> '    d888 '88%'  888E  888E   888E    8888    9888 'Y'   888E  888E 
+"X: `*88888%`     !  888E  888E  888R I888>   4888>      '888.+'     888E  888E   888E    8888    9888       888E  888E 
+"'8h.. ``     ..x8>  888E  888E u8888cJ888   .d888L .+   8888L       888E  '88F   888E   .8888Lu= 9888       888E  888E 
+" `88888888888888f   888E  888E  '*888*P'    ^'8888*'    '8888c. .+ .888N..888    '88&   ^%888*   ?8888u../  888E  888E 
+"  '%8888888888*'   m888N= 888>    'Y'          'Y'       '88888%    `'888*''     R888'    'Y'     '8888P'  m888N= 888> 
+"     ^'****''`      `Y'   888                              'YP'        ''         ''                'P'     `Y'   888  
+"                         J88'                                                                                    J88'  
+"                         @%                                                                                      @%    
+"                       :'                                                                                      :'      
+"
 set background=dark
 hi clear
 
@@ -22,33 +30,33 @@ let colors_name = "velvet"
 " Define colors {{{
 
 let s:vc = {}
-let s:vc.plain = ['ffffff', 15]
-let s:vc.white = ['ffffff', 15]
-let s:vc.black = ['000000', 16]
+let s:vc.plain 			= ['ffffff', 15]
+let s:vc.white 			= ['ffffff', 15]
+let s:vc.black 			= ['000000', 16]
 let s:vc.brightgravel   = ['d9cec3', 252]
 let s:vc.lightgravel    = ['998f84', 245]
-let s:vc.pinkpurple    = ['998f84', 165]
+let s:vc.pinkpurple     = ['998f84', 165]
 let s:vc.lightlightpurple    = ['998f84', 93]
 let s:vc.lightpurple    = ['998f84', 93]
-let s:vc.brightpurple    = ['998f84', 98]
-let s:vc.darkpurple    = ['998f84', 57]
-let s:vc.brightorange    = ['998f84', 166]
-let s:vc.brightred = ['fade3e', 196]
-let s:vc.brightaqua = ['ffa724', 45]
-let s:vc.igravel = ['cccccc', 242]
+let s:vc.brightpurple   = ['998f84', 98]
+let s:vc.darkpurple    	= ['998f84', 57]
+let s:vc.brightorange   = ['998f84', 166]
+let s:vc.brightred 		= ['fade3e', 196]
+let s:vc.brightaqua 	= ['ffa724', 45]
+let s:vc.igravel 		= ['cccccc', 242]
 let s:vc.mediumgravel   = ['666462', 241]
 let s:vc.deepgravel     = ['45413b', 238]
 let s:vc.deepergravel   = ['35322d', 236]
 let s:vc.darkgravel     = ['242321', 235]
 let s:vc.blackgravel    = ['1c1b1a', 233]
 let s:vc.blackestgravel = ['141413', 232]
-let s:vc.dirtyblonde = ['f4cf86', 222]
-let s:vc.tardis = ['0a9dff', 39]
-let s:vc.lime = ['aeee00', 87]
-let s:vc.dress = ['ff9eb8', 211]
-let s:vc.toffee = ['b88853', 137]
-let s:vc.coffee    = ['c7915b', 173]
-let s:vc.darkroast = ['88633f', 95]
+let s:vc.army 			= ['f4cf86', 101]
+let s:vc.armylight 		= ['f4cf86', 107]
+let s:vc.lime 			= ['aeee00', 87]
+let s:vc.dress 	   		= ['ff9eb8', 211]
+let s:vc.toffee 		= ['b88853', 137]
+let s:vc.coffee    		= ['c7915b', 173]
+let s:vc.darkroast 		= ['88633f', 95]
 
 " }}}
 
@@ -113,14 +121,14 @@ call s:HL('VisualNOS', '',  'deepgravel')
 call s:HL('Search',    'brightred', 'blackgravel', 'bold')
 call s:HL('IncSearch', 'brightorange', 'blackgravel',    'bold')
 call s:HL('Underlined', 'fg', '', 'underline')
-call s:HL('StatusLine',   'black', 'tardis',     'bold')
+call s:HL('StatusLine',   'black', 'brightaqua',     'bold')
 call s:HL('StatusLineNC', 'white', 'deepgravel', 'bold')
-call s:HL('Directory', 'dirtyblonde', '', 'bold')
+call s:HL('Directory', 'army', '', 'bold')
 call s:HL('Title', 'lime')
 call s:HL('ErrorMsg',   'brightpurple',       'bg', 'bold')
 call s:HL('MoreMsg',    'brightred',   '',   'bold')
-call s:HL('ModeMsg',    'dirtyblonde', '',   'bold')
-call s:HL('Question',   'dirtyblonde', '',   'bold')
+call s:HL('ModeMsg',    'army', '',   'bold')
+call s:HL('Question',   'army', '',   'bold')
 call s:HL('WarningMsg', 'brightred',       '',   'bold')
 
 " This is a ctags tag, not an HTML one.  'Something you can use c-] on'.
@@ -139,9 +147,9 @@ call s:HL('FoldColumn', 'mediumgravel', 'blackestgravel')
 " }}}
 " Cursor {{{
 
-call s:HL('Cursor',  'black', 'tardis', 'bold')
-call s:HL('vCursor', 'black', 'tardis', 'bold')
-call s:HL('iCursor', 'black', 'tardis', 'none')
+call s:HL('Cursor',  'black', 'brightaqua', 'bold')
+call s:HL('vCursor', 'black', 'brightaqua', 'bold')
+call s:HL('iCursor', 'black', 'brightaqua', 'none')
 
 " }}}
 " Syntax highlighting {{{
@@ -155,7 +163,7 @@ call s:HL('Todo',           'white', 'bg', 'bold')
 call s:HL('SpecialComment', 'white', 'bg', 'bold')
 
 " Strings are a nice, pale straw color.  Nothing too fancy.
-call s:HL('String', 'dirtyblonde')
+call s:HL('String', 'army')
 
 " Control flow stuff is brightpurple.
 call s:HL('Statement',   'brightpurple', '', 'bold')
@@ -209,7 +217,7 @@ call s:HL('Ignore', 'igravel', '',      '')
 " Completion Menu {{{
 
 call s:HL('Pmenu', 'plain', 'deepergravel')
-call s:HL('PmenuSel', 'black', 'tardis', 'bold')
+call s:HL('PmenuSel', 'black', 'brightaqua', 'bold')
 call s:HL('PmenuSbar', '', 'deepergravel')
 call s:HL('PmenuThumb', 'brightgravel')
 
@@ -252,16 +260,16 @@ endif
     call s:HL('CtrlPPrtText', 'plain', 'bg', 'none')
 
     " the prompt’s cursor when moving over the text
-    call s:HL('CtrlPPrtCursor', 'black', 'tardis', 'bold')
+    call s:HL('CtrlPPrtCursor', 'black', 'brightaqua', 'bold')
 
     " 'prt' or 'win', also for 'regex'
-    call s:HL('CtrlPMode1', 'black', 'tardis', 'bold')
+    call s:HL('CtrlPMode1', 'black', 'brightaqua', 'bold')
 
     " 'file' or 'path', also for the local working dir
-    call s:HL('CtrlPMode2', 'black', 'tardis', 'bold')
+    call s:HL('CtrlPMode2', 'black', 'brightaqua', 'bold')
 
     " the scanning status
-    call s:HL('CtrlPStats', 'black', 'tardis', 'bold')
+    call s:HL('CtrlPStats', 'black', 'brightaqua', 'bold')
 
     " TODO: CtrlP extensions.
     " CtrlPTabExtra  : the part of each line that’s not matched against (Comment)
@@ -273,7 +281,7 @@ endif
 " }}}
 " EasyMotion {{{
 
-call s:HL('EasyMotionTarget', 'tardis',     'bg', 'bold')
+call s:HL('EasyMotionTarget', 'brightaqua',     'bg', 'bold')
 call s:HL('EasyMotionShade',  'deepgravel', 'bg')
 
 " }}}
@@ -294,10 +302,10 @@ call s:HL('InterestingWord3', 'black', 'brightpurple')
 " }}}
 " ShowMarks {{{
 
-call s:HL('ShowMarksHLl', 'tardis', 'blackgravel')
-call s:HL('ShowMarksHLu', 'tardis', 'blackgravel')
-call s:HL('ShowMarksHLo', 'tardis', 'blackgravel')
-call s:HL('ShowMarksHLm', 'tardis', 'blackgravel')
+call s:HL('ShowMarksHLl', 'brightaqua', 'blackgravel')
+call s:HL('ShowMarksHLu', 'brightaqua', 'blackgravel')
+call s:HL('ShowMarksHLo', 'brightaqua', 'blackgravel')
+call s:HL('ShowMarksHLm', 'brightaqua', 'blackgravel')
 
 " }}}
 
@@ -325,11 +333,11 @@ call s:HL('clojureAnonArg', 'white', '', 'bold')
 " }}}
 " CSS {{{
 
-call s:HL('cssColorProp', 'dirtyblonde', '', 'none')
-call s:HL('cssBoxProp', 'dirtyblonde', '', 'none')
-call s:HL('cssTextProp', 'dirtyblonde', '', 'none')
-call s:HL('cssRenderProp', 'dirtyblonde', '', 'none')
-call s:HL('cssGeneratedContentProp', 'dirtyblonde', '', 'none')
+call s:HL('cssColorProp', 'army', '', 'none')
+call s:HL('cssBoxProp', 'army', '', 'none')
+call s:HL('cssTextProp', 'army', '', 'none')
+call s:HL('cssRenderProp', 'army', '', 'none')
+call s:HL('cssGeneratedContentProp', 'army', '', 'none')
 
 call s:HL('cssValueLength', 'toffee', '', 'bold')
 call s:HL('cssColor', 'toffee', '', 'bold')
@@ -353,7 +361,7 @@ call s:HL('diffSubname', 'lightpurple', '', 'none')
 " }}}
 " Django Templates {{{
 
-call s:HL('djangoArgument', 'dirtyblonde', '',)
+call s:HL('djangoArgument', 'army', '',)
 call s:HL('djangoTagBlock', 'lightpurple', '')
 call s:HL('djangoVarBlock', 'lightpurple', '')
 " hi djangoStatement guifg=#ff3853 gui=bold
@@ -404,7 +412,7 @@ call s:HL('mailSignature', 'igravel', '', 'none')
 
 call s:HL('mailQuoted1', 'igravel', '', 'none')
 call s:HL('mailQuoted2', 'brightred', '', 'none')
-call s:HL('mailQuoted3', 'dirtyblonde', '', 'none')
+call s:HL('mailQuoted3', 'army', '', 'none')
 call s:HL('mailQuoted4', 'lightpurple', '', 'none')
 call s:HL('mailQuoted5', 'lime', '', 'none')
 
@@ -430,9 +438,9 @@ call s:HL('markdownUrl', 'toffee', '', 'bold')
 call s:HL('markdownUrldelimiter', 'lightgravel', '', 'bold')
 call s:HL('markdownLinkDelimiter', 'lightgravel', '', 'bold')
 call s:HL('markdownLinkTextDelimiter', 'lightgravel', '', 'bold')
-call s:HL('markdownCodeDelimiter', 'dirtyblonde', '', 'bold')
-call s:HL('markdownCode', 'dirtyblonde', '', 'none')
-call s:HL('markdownCodeBlock', 'dirtyblonde', '', 'none')
+call s:HL('markdownCodeDelimiter', 'army', '', 'bold')
+call s:HL('markdownCode', 'army', '', 'none')
+call s:HL('markdownCodeBlock', 'army', '', 'none')
 
 " }}}
 " MySQL {{{
