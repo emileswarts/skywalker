@@ -59,8 +59,8 @@ let s:vc.darkroast 		= ['88633f', 95]
 
 " }}}
 
-if ! exists("g:shoreditch_black_background")
-    let g:shoreditch_black_background = 0
+if ! exists("g:velvet_black_background")
+    let g:velvet_black_background = 0
 endif
 
 " Highlighting Function {{{
@@ -108,7 +108,7 @@ endfunction
 " Vanilla Vim {{{
 " General/UI {{{
 
-call s:HL('Normal', 'plain', 'blackgravel')
+call s:HL('Normal', 'plain', 'blackestgravel')
 call s:HL('Folded', 'mediumgravel', 'bg', 'none')
 call s:HL('VertSplit', 'lightgravel', 'bg', 'none')
 call s:HL('CursorLine',   '', 'darkgravel', 'none')
