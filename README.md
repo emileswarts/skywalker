@@ -10,4 +10,7 @@ URL: https://github.com/emileswarts/velvet-vim-colourscheme
   |  | .+ | |  | .+'| |  | .+'| |  | .+ | |  | .+'|      |  |      
   `+.|=|.+' `+.|=|.+' `+.|=|.+' `+.|=|.+' `+.|=|.+' '`'`'`'`'`'`'
 
-  This is my coloursheme using purples, just to be different.
+  Welcome to Shoreditch.  Coffee here cost £20.00.
+  This colourscheme is heavily inspired by Steve Losh's Bad Wolf, and most of the functions are from there.
+  This is still a work in progress.
+
