@@ -2,22 +2,11 @@
 " Last Change:  2012/10/04
 " URL: https://github.com/emileswarts/velvet-vim-colourscheme
 "
-"
-"  .    .    . .       .         .    .    . .       . .    .    
-"  .+'|  .'| .+'|=|`+. .+'|      .+'|  .'| .+'|=|`+. .+'|=|`+.=|`+. 
-"  |  |  | | |  | `+.| |  |      |  |  | | |  | `+.| |.+' |  | `+.| 
-"  |  |  | | |  |=|`.  |  |      |  |  | | |  |=|`.       |  |      
-"  |  |  | | |  | `.|  |  |      |  |  | | |  | `.|       |  |      
-"  |  |  | | |  |    . |  |    . |  |  | | |  |    .      |  |      
-"  |  | .+ | |  | .+'| |  | .+'| |  | .+ | |  | .+'|      |  |      
-"  `+.|=|.+' `+.|=|.+' `+.|=|.+' `+.|=|.+' `+.|=|.+' '`'`'`'`'`'`'
-"          
-"
 set background=dark
 hi clear
 
 if version > 580
-    " You gotta upgrade, man
+    " You gotta upgrade
 	if exists("syntax_on")
 		syntax reset
 	endif
@@ -25,20 +14,20 @@ endif
 
 let g:colors_name = "velvet"
 
-" Define colors {{{
+" COLOURS {{{
 
 let s:vc = {}
 let s:vc.plain 				= ['ffffff', 15]
 let s:vc.white 				= ['ffffff', 15]
-let s:vc.brightgravel   	= ['d9cec3', 252]
-let s:vc.lightgravel    	= ['998f84', 245]
-let s:vc.igravel 			= ['cccccc', 242]
-let s:vc.mediumgravel   	= ['666462', 241]
-let s:vc.deepgravel     	= ['45413b', 238]
-let s:vc.deepergravel   	= ['35322d', 236]
-let s:vc.darkgravel     	= ['242321', 235]
-let s:vc.blackgravel    	= ['1c1b1a', 233]
-let s:vc.blackestgravel 	= ['141413', 232]
+let s:vc.brightgrey   	= ['d9cec3', 252]
+let s:vc.lightgrey    	= ['998f84', 245]
+let s:vc.igrey 			= ['cccccc', 242]
+let s:vc.mediumgrey   	= ['666462', 241]
+let s:vc.deepgrey     	= ['45413b', 238]
+let s:vc.deepergrey   	= ['35322d', 236]
+let s:vc.darkgrey     	= ['242321', 235]
+let s:vc.blackgrey    	= ['1c1b1a', 233]
+let s:vc.blackestgrey 	= ['141413', 232]
 let s:vc.black 				= ['000000', 16]
 
 let s:vc.pinkpurple     	= ['998f84', 165]
@@ -52,12 +41,9 @@ let s:vc.brightred 			= ['fade3e', 196]
 let s:vc.brightaqua 		= ['ffa724', 45]
 let s:vc.army 				= ['f4cf86', 101]
 let s:vc.armylight 			= ['f4cf86', 107]
-let s:vc.lime 				= ['aeee00', 87]
+let s:vc.aqua 				= ['aeee00', 87]
 
-let s:vc.peach 	   			= ['ff9eb8', 211]
-let s:vc.sand 				= ['b88853', 137]
-let s:vc.coffee    			= ['c7915b', 173]
-let s:vc.darkroast 			= ['88633f', 95]
+let s:vc.brightyellow 		= ['88633f', 220]
 
 " }}}
 
@@ -110,24 +96,24 @@ endfunction
 " Vanilla Vim {{{
 " General/UI {{{
 
-call s:HL('Normal', 'plain', 'blackestgravel')
-call s:HL('Folded', 'mediumgravel', 'bg', 'none')
-call s:HL('VertSplit', 'lightgravel', 'bg', 'none')
-call s:HL('CursorLine',   '', 'blackgravel', 'none')
-call s:HL('CursorColumn', '', 'blackgravel')
-call s:HL('ColorColumn',  '', 'darkgravel')
-call s:HL('MatchParen', 'brightred', 'blackestgravel', 'bold')
-call s:HL('NonText',    'deepgravel', 'bg')
-call s:HL('SpecialKey', 'deepgravel', 'bg')
-call s:HL('Visual',    '',  'deepgravel')
-call s:HL('VisualNOS', '',  'deepgravel')
-call s:HL('Search',    'brightred', 'blackestgravel', 'bold')
-call s:HL('IncSearch', 'brightorange', 'blackestgravel',    'bold')
+call s:HL('Normal', 'plain', 'blackestgrey')
+call s:HL('Folded', 'mediumgrey', 'bg', 'none')
+call s:HL('VertSplit', 'lightgrey', 'bg', 'none')
+call s:HL('CursorLine',   '', 'blackgrey', 'none')
+call s:HL('CursorColumn', '', 'blackgrey')
+call s:HL('ColorColumn',  '', 'darkgrey')
+call s:HL('MatchParen', 'brightred', 'blackestgrey', 'bold')
+call s:HL('NonText',    'deepgrey', 'bg')
+call s:HL('SpecialKey', 'deepgrey', 'bg')
+call s:HL('Visual',    '',  'deepgrey')
+call s:HL('VisualNOS', '',  'deepgrey')
+call s:HL('Search',    'brightred', 'blackestgrey', 'bold')
+call s:HL('IncSearch', 'brightorange', 'blackestgrey',    'bold')
 call s:HL('Underlined', 'fg', '', 'underline')
 call s:HL('StatusLine',   'black', 'brightaqua',     'bold')
-call s:HL('StatusLineNC', 'white', 'deepgravel', 'bold')
+call s:HL('StatusLineNC', 'white', 'deepgrey', 'bold')
 call s:HL('Directory', 'army', '', 'bold')
-call s:HL('Title', 'lime')
+call s:HL('Title', 'aqua')
 call s:HL('ErrorMsg',   'brightpurple',       'bg', 'bold')
 call s:HL('MoreMsg',    'brightred',   '',   'bold')
 call s:HL('ModeMsg',    'army', '',   'bold')
@@ -142,9 +128,9 @@ call s:HL('Tag', '', '', 'bold')
 
 " }}}
 " Gutter {{{
-call s:HL('LineNr',     'mediumgravel', 'blackestgravel')
-call s:HL('SignColumn', '',             'blackestgravel')
-call s:HL('FoldColumn', 'mediumgravel', 'blackestgravel')
+call s:HL('LineNr',     'mediumgrey', 'blackestgrey')
+call s:HL('SignColumn', '',             'blackestgrey')
+call s:HL('FoldColumn', 'mediumgrey', 'blackestgrey')
 
 " }}}
 " Cursor {{{
@@ -160,7 +146,7 @@ call s:HL('iCursor', 'black', 'brightaqua', 'none')
 call s:HL('Special', 'plain')
 
 " Comments are slightly brighter than folds, to make 'headers' easier to see.
-call s:HL('Comment',        'blackestgravel')
+call s:HL('Comment',        'blackestgrey')
 call s:HL('Todo',           'white', 'bg', 'bold')
 call s:HL('SpecialComment', 'white', 'bg', 'bold')
 
@@ -179,16 +165,16 @@ call s:HL('Repeat',      'brightpurple', '', 'none')
 call s:HL('Identifier', 'lightpurple', '', 'none')
 call s:HL('Function',   'lightpurple', '', 'none')
 
-" Preprocessor stuff is lime, to make it pop.
+" Preprocessor stuff is aqua, to make it pop.
 "
 " This includes imports in any given language, because they should usually be
 " grouped together at the beginning of a file.  If they're in the middle of some
 " other code they should stand out, because something tricky is
 " probably going on.
-call s:HL('PreProc',   'lime', '', 'none')
-call s:HL('Macro',     'lime', '', 'none')
-call s:HL('Define',    'lime', '', 'none')
-call s:HL('PreCondit', 'lime', '', 'bold')
+call s:HL('PreProc',   'aqua', '', 'none')
+call s:HL('Macro',     'aqua', '', 'none')
+call s:HL('Define',    'aqua', '', 'none')
+call s:HL('PreCondit', 'aqua', '', 'bold')
 
 " Constants of all kinds are colored together.
 " I'm not really happy with the color yet...
@@ -208,28 +194,28 @@ call s:HL('Structure', 'brightpurple', '', 'none')
 call s:HL('Typedef', 'brightpurple', '', 'bold')
 
 " Make try/catch blocks stand out.
-call s:HL('Exception', 'lime', '', 'bold')
+call s:HL('Exception', 'aqua', '', 'bold')
 
 " Misc
 call s:HL('Error',  'white',   'brightpurple', 'bold')
 call s:HL('Debug',  'white',   '',      'bold')
-call s:HL('Ignore', 'igravel', '',      '')
+call s:HL('Ignore', 'igrey', '',      '')
 
 " }}}
 " Completion Menu {{{
 
-call s:HL('Pmenu', 'plain', 'deepergravel')
+call s:HL('Pmenu', 'plain', 'deepergrey')
 call s:HL('PmenuSel', 'black', 'brightaqua', 'bold')
-call s:HL('PmenuSbar', '', 'deepergravel')
-call s:HL('PmenuThumb', 'brightgravel')
+call s:HL('PmenuSbar', '', 'deepergrey')
+call s:HL('PmenuThumb', 'brightgrey')
 
 " }}}
 " Diffs {{{
 
 call s:HL('DiffDelete', 'black', 'black')
-call s:HL('DiffAdd',    '',     'deepergravel')
-call s:HL('DiffChange', '',     'darkgravel')
-call s:HL('DiffText',   'white', 'deepergravel', 'bold')
+call s:HL('DiffAdd',    '',     'deepergrey')
+call s:HL('DiffChange', '',     'darkgrey')
+call s:HL('DiffText',   'white', 'deepergrey', 'bold')
 
 " }}}
 " Spelling {{{
@@ -252,10 +238,10 @@ endif
     call s:HL('CtrlPMatch', 'lightpurple', 'bg', 'none')
 
     " the line prefix '>' in the match window
-    call s:HL('CtrlPLinePre', 'deepgravel', 'bg', 'none')
+    call s:HL('CtrlPLinePre', 'deepgrey', 'bg', 'none')
 
     " the prompt’s base
-    call s:HL('CtrlPPrtBase', 'deepgravel', 'bg', 'none')
+    call s:HL('CtrlPPrtBase', 'deepgrey', 'bg', 'none')
 
     " the prompt’s text
     call s:HL('CtrlPPrtText', 'plain', 'bg', 'none')
@@ -283,7 +269,7 @@ endif
 " EasyMotion {{{
 
 call s:HL('EasyMotionTarget', 'brightaqua',     'bg', 'bold')
-call s:HL('EasyMotionShade',  'deepgravel', 'bg')
+call s:HL('EasyMotionShade',  'deepgrey', 'bg')
 
 " }}}
 " Interesting Words {{{
@@ -291,7 +277,7 @@ call s:HL('EasyMotionShade',  'deepgravel', 'bg')
 " These are only used if you're me or have copied the <leader>hNUM mappings
 " from my Vimrc.
 call s:HL('InterestingWord1', 'black', 'lightpurple')
-call s:HL('InterestingWord2', 'black', 'lime')
+call s:HL('InterestingWord2', 'black', 'aqua')
 call s:HL('InterestingWord3', 'black', 'brightpurple')
 
 " }}}
@@ -302,10 +288,10 @@ call s:HL('InterestingWord3', 'black', 'brightpurple')
 
 " }}}
 " ShowMarks {{{
-	call s:HL('ShowMarksHLl', 'brightaqua', 'blackgravel')
-	call s:HL('ShowMarksHLu', 'brightaqua', 'blackgravel')
-	call s:HL('ShowMarksHLo', 'brightaqua', 'blackgravel')
-	call s:HL('ShowMarksHLm', 'brightaqua', 'blackgravel')
+	call s:HL('ShowMarksHLl', 'brightaqua', 'blackgrey')
+	call s:HL('ShowMarksHLu', 'brightaqua', 'blackgrey')
+	call s:HL('ShowMarksHLo', 'brightaqua', 'blackgrey')
+	call s:HL('ShowMarksHLm', 'brightaqua', 'blackgrey')
 " }}}
 
 " }}}
@@ -320,7 +306,7 @@ call s:HL('InterestingWord3', 'black', 'brightpurple')
 	call s:HL('clojureKeyword', 'lightpurple', '', 'none')
 	call s:HL('clojureFunc',   'brightred', '', 'none')
 	call s:HL('clojureRepeat', 'brightred', '', 'none')
-	call s:HL('clojureParen0', 'lightgravel', '', 'none')
+	call s:HL('clojureParen0', 'lightgrey', '', 'none')
 	call s:HL('clojureAnonArg', 'white', '', 'bold')
 " }}}
 " CSS {{{
@@ -331,16 +317,16 @@ call s:HL('InterestingWord3', 'black', 'brightpurple')
 	call s:HL('cssGeneratedContentProp', 'army', '', 'none')
 	call s:HL('cssValueLength', 'armylight', '', 'bold')
 	call s:HL('cssColor', 'armylight', '', 'bold')
-	call s:HL('cssBraces', 'lightgravel', '', 'none')
+	call s:HL('cssBraces', 'lightgrey', '', 'none')
 	call s:HL('cssIdentifier', 'lightpurple', '', 'bold')
 	call s:HL('cssClassName', 'lightpurple', '', 'none')
 " }}}
 " Diff {{{
 
-call s:HL('gitDiff', 'lightgravel', '',)
+call s:HL('gitDiff', 'lightgrey', '',)
 
 call s:HL('diffRemoved', 'brightred', '',)
-call s:HL('diffAdded', 'lime', '',)
+call s:HL('diffAdded', 'aqua', '',)
 call s:HL('diffFile', 'black', 'brightpurple', 'bold')
 call s:HL('diffNewFile', 'black', 'brightpurple', 'bold')
 
@@ -373,60 +359,60 @@ call s:HL('htmlArg', 'darkpurple', '', 'none')
 
 " Stuff inside an <a> tag
 
-call s:HL('htmlLink', 'lightgravel', '', 'underline')
+call s:HL('htmlLink', 'lightgrey', '', 'underline')
 
 " }}}
 " Java {{{
 
 call s:HL('javaClassDecl', 'brightpurple', '', 'bold')
 call s:HL('javaScopeDecl', 'brightpurple', '', 'bold')
-call s:HL('javaCommentTitle', 'igravel', '')
+call s:HL('javaCommentTitle', 'igrey', '')
 call s:HL('javaDocTags', 'white', '', 'none')
 call s:HL('javaDocParam', 'brightred', '', '')
 
 " }}}
 " LessCSS {{{
 
-call s:HL('lessVariable', 'lime', '', 'none')
+call s:HL('lessVariable', 'aqua', '', 'none')
 
 " }}}
 " Mail {{{
 
 call s:HL('mailSubject', 'lightpurple', '', 'bold')
-call s:HL('mailHeader', 'lightgravel', '', '')
-call s:HL('mailHeaderKey', 'lightgravel', '', '')
+call s:HL('mailHeader', 'lightgrey', '', '')
+call s:HL('mailHeaderKey', 'lightgrey', '', '')
 call s:HL('mailHeaderEmail', 'white', '', '')
 call s:HL('mailURL', 'armylight', '', 'underline')
-call s:HL('mailSignature', 'igravel', '', 'none')
+call s:HL('mailSignature', 'igrey', '', 'none')
 
-call s:HL('mailQuoted1', 'igravel', '', 'none')
+call s:HL('mailQuoted1', 'igrey', '', 'none')
 call s:HL('mailQuoted2', 'brightred', '', 'none')
 call s:HL('mailQuoted3', 'army', '', 'none')
 call s:HL('mailQuoted4', 'lightpurple', '', 'none')
-call s:HL('mailQuoted5', 'lime', '', 'none')
+call s:HL('mailQuoted5', 'aqua', '', 'none')
 
 " }}}
 " Markdown {{{
 
-call s:HL('markdownHeadingRule', 'lightgravel', '', 'bold')
-call s:HL('markdownHeadingDelimiter', 'lightgravel', '', 'bold')
-call s:HL('markdownOrderedListMarker', 'lightgravel', '', 'bold')
-call s:HL('markdownListMarker', 'lightgravel', '', 'bold')
+call s:HL('markdownHeadingRule', 'lightgrey', '', 'bold')
+call s:HL('markdownHeadingDelimiter', 'lightgrey', '', 'bold')
+call s:HL('markdownOrderedListMarker', 'lightgrey', '', 'bold')
+call s:HL('markdownListMarker', 'lightgrey', '', 'bold')
 call s:HL('markdownItalic', 'white', '', 'bold')
 call s:HL('markdownBold', 'white', '', 'bold')
 call s:HL('markdownH1', 'lightpurple', '', 'bold')
-call s:HL('markdownH2', 'lime', '', 'bold')
-call s:HL('markdownH3', 'lime', '', 'none')
-call s:HL('markdownH4', 'lime', '', 'none')
-call s:HL('markdownH5', 'lime', '', 'none')
-call s:HL('markdownH6', 'lime', '', 'none')
+call s:HL('markdownH2', 'aqua', '', 'bold')
+call s:HL('markdownH3', 'aqua', '', 'none')
+call s:HL('markdownH4', 'aqua', '', 'none')
+call s:HL('markdownH5', 'aqua', '', 'none')
+call s:HL('markdownH6', 'aqua', '', 'none')
 call s:HL('markdownLinkText', 'armylight', '', 'underline')
 call s:HL('markdownIdDeclaration', 'armylight')
 call s:HL('markdownAutomaticLink', 'armylight', '', 'bold')
 call s:HL('markdownUrl', 'armylight', '', 'bold')
-call s:HL('markdownUrldelimiter', 'lightgravel', '', 'bold')
-call s:HL('markdownLinkDelimiter', 'lightgravel', '', 'bold')
-call s:HL('markdownLinkTextDelimiter', 'lightgravel', '', 'bold')
+call s:HL('markdownUrldelimiter', 'lightgrey', '', 'bold')
+call s:HL('markdownLinkDelimiter', 'lightgrey', '', 'bold')
+call s:HL('markdownLinkTextDelimiter', 'lightgrey', '', 'bold')
 call s:HL('markdownCodeDelimiter', 'army', '', 'bold')
 call s:HL('markdownCode', 'army', '', 'none')
 call s:HL('markdownCodeBlock', 'army', '', 'none')
@@ -434,6 +420,19 @@ call s:HL('markdownCodeBlock', 'army', '', 'none')
 " }}}
 " PHP {{{
 
+call s:HL('phpRegionDelimiter', 'brightred', '', 'bold')
+call s:HL('phpPropertySelector', 'brightyellow', '', 'bold')
+call s:HL('phpPropertySelectorInString', 'brightyellow', '', 'bold')
+call s:HL('phpOperator', 'brightyellow', '', 'bold')
+call s:HL('phpArrayPair', 'brightyellow', '', 'bold')
+call s:HL('phpAssignByRef', 'brightyellow', '', 'bold')
+call s:HL('phpRelation', 'brightyellow', '', 'bold')
+call s:HL('phpMemberSelector', 'brightyellow', '', 'bold')
+call s:HL('phpUnknownSelector', 'brightyellow', '', 'bold')
+call s:HL('phpVarSelector', 'brightyellow', '', 'bold')
+call s:HL('phpSemicolon', 'brightyellow', '', 'bold')
+call s:HL('phpFunctions', 'brightyellow', '', 'bold')
+call s:HL('phpParent', 'brightyellow', '', 'bold')
 " }}}
 " MySQL {{{
 
@@ -447,17 +446,17 @@ call s:HL('markdownCodeBlock', 'army', '', 'none')
 	call s:HL('pythonBuiltinObj',  'brightred')
 	call s:HL('pythonBuiltinFunc', 'brightred')
 	call s:HL('pythonEscape',      'brightred')
-	call s:HL('pythonException',   'lime', '', 'bold')
-	call s:HL('pythonExceptions',  'lime', '', 'none')
-	call s:HL('pythonPrecondit',   'lime', '', 'none')
+	call s:HL('pythonException',   'aqua', '', 'bold')
+	call s:HL('pythonExceptions',  'aqua', '', 'none')
+	call s:HL('pythonPrecondit',   'aqua', '', 'none')
 	call s:HL('pythonDecorator',   'brightpurple', '', 'none')
-	call s:HL('pythonRun',         'igravel', '', 'bold')
-	call s:HL('pythonCoding',      'igravel', '', 'bold')
+	call s:HL('pythonRun',         'igrey', '', 'bold')
+	call s:HL('pythonCoding',      'igrey', '', 'bold')
 
 " }}}
 " Vim {{{
 
-	call s:HL('VimCommentTitle', 'lightgravel', '', 'bold')
+	call s:HL('VimCommentTitle', 'lightgrey', '', 'bold')
 	call s:HL('VimMapMod',    'brightred', '', 'none')
 	call s:HL('VimMapModKey', 'brightred', '', 'none')
 	call s:HL('VimNotation', 'brightred', '', 'none')
