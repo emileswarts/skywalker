@@ -37,6 +37,7 @@ let s:vc.lightpurple    	= ['998f84', 93]
 let s:vc.brightpurple   	= ['998f84', 98]
 let s:vc.darkpurple    		= ['998f84', 57]
 
+let s:vc.lightorange 		= ['000000', 208]
 let s:vc.brightorange   	= ['998f84', 166]
 let s:vc.brightred 			= ['fade3e', 196]
 let s:vc.brightaqua 		= ['ffa724', 45]
@@ -172,16 +173,16 @@ call s:HL('Function',   'lightpurple', '', 'none')
 " grouped together at the beginning of a file.  If they're in the middle of some
 " other code they should stand out, because something tricky is
 " probably going on.
-call s:HL('PreProc',   'brightyellow', '', 'none')
-call s:HL('Macro',     'brightyellow', '', 'none')
-call s:HL('Define',    'brightorange', '', 'none')
+call s:HL('PreProc',   'brightaqua', '', 'none')
+call s:HL('Macro',     'brightaqua', '', 'none')
+call s:HL('Define',    'lightorange', '', 'none')  "php functions in here
 call s:HL('PreCondit', 'brightyellow', '', 'bold')
 
 " Constants of all kinds are colored together.
 " I'm not really happy with the color yet...
-call s:HL('Constant',  'brightorange', '', 'bold')
-call s:HL('Character', 'brightorange', '', 'bold')
-call s:HL('Boolean',   'brightorange', '', 'bold')
+call s:HL('Constant',  'brightaqua', '', 'bold')
+call s:HL('Character', 'brightaqua', '', 'bold')
+call s:HL('Boolean',   'brightaqua', '', 'bold')
 
 call s:HL('Number', 'brightorange', '', 'bold')
 call s:HL('Float',  'brightorange', '', 'bold')
