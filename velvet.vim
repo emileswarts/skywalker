@@ -17,8 +17,7 @@ set background=dark
 hi clear
 
 if version > 580
-    " no guarantees for version 5.8 and below, but this makes it stop
-    " complaining
+    " You gotta upgrade, man
 	if exists("syntax_on")
 		syntax reset
 	endif
@@ -29,33 +28,36 @@ let g:colors_name = "velvet"
 " Define colors {{{
 
 let s:vc = {}
-let s:vc.plain 			= ['ffffff', 15]
-let s:vc.white 			= ['ffffff', 15]
-let s:vc.black 			= ['000000', 16]
-let s:vc.brightgravel   = ['d9cec3', 252]
-let s:vc.lightgravel    = ['998f84', 245]
-let s:vc.pinkpurple     = ['998f84', 165]
-let s:vc.lightlightpurple    = ['998f84', 93]
-let s:vc.lightpurple    = ['998f84', 93]
-let s:vc.brightpurple   = ['998f84', 98]
-let s:vc.darkpurple    	= ['998f84', 57]
-let s:vc.brightorange   = ['998f84', 166]
-let s:vc.brightred 		= ['fade3e', 196]
-let s:vc.brightaqua 	= ['ffa724', 45]
-let s:vc.igravel 		= ['cccccc', 242]
-let s:vc.mediumgravel   = ['666462', 241]
-let s:vc.deepgravel     = ['45413b', 238]
-let s:vc.deepergravel   = ['35322d', 236]
-let s:vc.darkgravel     = ['242321', 235]
-let s:vc.blackgravel    = ['1c1b1a', 233]
-let s:vc.blackestgravel = ['141413', 232]
-let s:vc.army 			= ['f4cf86', 101]
-let s:vc.armylight 		= ['f4cf86', 107]
-let s:vc.lime 			= ['aeee00', 87]
-let s:vc.peach 	   		= ['ff9eb8', 211]
-let s:vc.sand 			= ['b88853', 137]
-let s:vc.coffee    		= ['c7915b', 173]
-let s:vc.darkroast 		= ['88633f', 95]
+let s:vc.plain 				= ['ffffff', 15]
+let s:vc.white 				= ['ffffff', 15]
+let s:vc.brightgravel   	= ['d9cec3', 252]
+let s:vc.lightgravel    	= ['998f84', 245]
+let s:vc.igravel 			= ['cccccc', 242]
+let s:vc.mediumgravel   	= ['666462', 241]
+let s:vc.deepgravel     	= ['45413b', 238]
+let s:vc.deepergravel   	= ['35322d', 236]
+let s:vc.darkgravel     	= ['242321', 235]
+let s:vc.blackgravel    	= ['1c1b1a', 233]
+let s:vc.blackestgravel 	= ['141413', 232]
+let s:vc.black 				= ['000000', 16]
+
+let s:vc.pinkpurple     	= ['998f84', 165]
+let s:vc.lightlightpurple   = ['998f84', 93]
+let s:vc.lightpurple    	= ['998f84', 93]
+let s:vc.brightpurple   	= ['998f84', 98]
+let s:vc.darkpurple    		= ['998f84', 57]
+
+let s:vc.brightorange   	= ['998f84', 166]
+let s:vc.brightred 			= ['fade3e', 196]
+let s:vc.brightaqua 		= ['ffa724', 45]
+let s:vc.army 				= ['f4cf86', 101]
+let s:vc.armylight 			= ['f4cf86', 107]
+let s:vc.lime 				= ['aeee00', 87]
+
+let s:vc.peach 	   			= ['ff9eb8', 211]
+let s:vc.sand 				= ['b88853', 137]
+let s:vc.coffee    			= ['c7915b', 173]
+let s:vc.darkroast 			= ['88633f', 95]
 
 " }}}
 
@@ -114,13 +116,13 @@ call s:HL('VertSplit', 'lightgravel', 'bg', 'none')
 call s:HL('CursorLine',   '', 'blackgravel', 'none')
 call s:HL('CursorColumn', '', 'blackgravel')
 call s:HL('ColorColumn',  '', 'darkgravel')
-call s:HL('MatchParen', 'brightred', 'darkgravel', 'bold')
+call s:HL('MatchParen', 'brightred', 'blackestgravel', 'bold')
 call s:HL('NonText',    'deepgravel', 'bg')
 call s:HL('SpecialKey', 'deepgravel', 'bg')
 call s:HL('Visual',    '',  'deepgravel')
 call s:HL('VisualNOS', '',  'deepgravel')
-call s:HL('Search',    'brightred', 'blackgravel', 'bold')
-call s:HL('IncSearch', 'brightorange', 'blackgravel',    'bold')
+call s:HL('Search',    'brightred', 'blackestgravel', 'bold')
+call s:HL('IncSearch', 'brightorange', 'blackestgravel',    'bold')
 call s:HL('Underlined', 'fg', '', 'underline')
 call s:HL('StatusLine',   'black', 'brightaqua',     'bold')
 call s:HL('StatusLineNC', 'white', 'deepgravel', 'bold')
@@ -327,8 +329,8 @@ call s:HL('InterestingWord3', 'black', 'brightpurple')
 	call s:HL('cssTextProp', 'army', '', 'none')
 	call s:HL('cssRenderProp', 'army', '', 'none')
 	call s:HL('cssGeneratedContentProp', 'army', '', 'none')
-	call s:HL('cssValueLength', 'sand', '', 'bold')
-	call s:HL('cssColor', 'sand', '', 'bold')
+	call s:HL('cssValueLength', 'armylight', '', 'bold')
+	call s:HL('cssColor', 'armylight', '', 'bold')
 	call s:HL('cssBraces', 'lightgravel', '', 'none')
 	call s:HL('cssIdentifier', 'lightpurple', '', 'bold')
 	call s:HL('cssClassName', 'lightpurple', '', 'none')
@@ -358,16 +360,16 @@ call s:HL('djangoVarBlock', 'lightpurple', '')
 " HTML {{{
 
 " Punctuation
-call s:HL('htmlTag',    'darkroast', 'bg', 'none')
-call s:HL('htmlEndTag', 'darkroast', 'bg', 'none')
+call s:HL('htmlTag',    'lightlightpurple', 'bg', 'none')
+call s:HL('htmlEndTag', 'lightlightpurple', 'bg', 'none')
 
 " Tag names
-call s:HL('htmlTagName',        'coffee', '', 'bold')
-call s:HL('htmlSpecialTagName', 'coffee', '', 'bold')
-call s:HL('htmlSpecialChar',    'lime',   '', 'none')
+call s:HL('htmlTagName',        'brightpurple', '', 'bold')
+call s:HL('htmlSpecialTagName', 'darkpurple', '', 'bold')
+call s:HL('htmlSpecialChar',    'lightlightpurple',   '', 'none')
 
 " Attributes
-call s:HL('htmlArg', 'coffee', '', 'none')
+call s:HL('htmlArg', 'darkpurple', '', 'none')
 
 " Stuff inside an <a> tag
 
@@ -394,7 +396,7 @@ call s:HL('mailSubject', 'lightpurple', '', 'bold')
 call s:HL('mailHeader', 'lightgravel', '', '')
 call s:HL('mailHeaderKey', 'lightgravel', '', '')
 call s:HL('mailHeaderEmail', 'white', '', '')
-call s:HL('mailURL', 'sand', '', 'underline')
+call s:HL('mailURL', 'armylight', '', 'underline')
 call s:HL('mailSignature', 'igravel', '', 'none')
 
 call s:HL('mailQuoted1', 'igravel', '', 'none')
@@ -418,10 +420,10 @@ call s:HL('markdownH3', 'lime', '', 'none')
 call s:HL('markdownH4', 'lime', '', 'none')
 call s:HL('markdownH5', 'lime', '', 'none')
 call s:HL('markdownH6', 'lime', '', 'none')
-call s:HL('markdownLinkText', 'sand', '', 'underline')
-call s:HL('markdownIdDeclaration', 'sand')
-call s:HL('markdownAutomaticLink', 'sand', '', 'bold')
-call s:HL('markdownUrl', 'sand', '', 'bold')
+call s:HL('markdownLinkText', 'armylight', '', 'underline')
+call s:HL('markdownIdDeclaration', 'armylight')
+call s:HL('markdownAutomaticLink', 'armylight', '', 'bold')
+call s:HL('markdownUrl', 'armylight', '', 'bold')
 call s:HL('markdownUrldelimiter', 'lightgravel', '', 'bold')
 call s:HL('markdownLinkDelimiter', 'lightgravel', '', 'bold')
 call s:HL('markdownLinkTextDelimiter', 'lightgravel', '', 'bold')
