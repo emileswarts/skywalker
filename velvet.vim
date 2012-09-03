@@ -158,7 +158,7 @@ call s:HL('iCursor', 'black', 'brightaqua', 'none')
 call s:HL('Special', 'plain')
 
 " Comments are slightly brighter than folds, to make 'headers' easier to see.
-call s:HL('Comment',        'blackestgravel')
+call s:HL('Comment',        'mediumgravel')
 call s:HL('Todo',           'white', 'bg', 'bold')
 call s:HL('SpecialComment', 'white', 'bg', 'bold')
 
