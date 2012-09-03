@@ -10,7 +10,7 @@ This is still a work in progress.
 
 Installation
 ==============
-Download velvet.vim into ~/.vim/colors 
+Clone the repository, and move velvet.vim into ~/.vim/colors/
 
-Add the following to your ~/.vimrc file
+Use as colourscheme in ~/.vimrc
 colorscheme velvet
