@@ -28,10 +28,11 @@ let s:vc.deepergrey   	= ['35322d', 236]
 let s:vc.darkgrey     	= ['242321', 235]
 let s:vc.blackgrey    	= ['1c1b1a', 233]
 let s:vc.blackestgrey 	= ['141413', 232]
-let s:vc.black 				= ['000000', 16]
+let s:vc.black 		    = ['000000', 16]
+let s:vc.pink 			= ['000000', 197]
 
 let s:vc.pinkpurple     	= ['998f84', 165]
-let s:vc.lightlightpurple   = ['998f84', 93]
+let s:vc.lightlightpurple   = ['998f84', 135]
 let s:vc.lightpurple    	= ['998f84', 93]
 let s:vc.brightpurple   	= ['998f84', 98]
 let s:vc.darkpurple    		= ['998f84', 57]
@@ -40,7 +41,7 @@ let s:vc.brightorange   	= ['998f84', 166]
 let s:vc.brightred 			= ['fade3e', 196]
 let s:vc.brightaqua 		= ['ffa724', 45]
 let s:vc.army 				= ['f4cf86', 101]
-let s:vc.armylight 			= ['f4cf86', 107]
+let s:vc.armylight 			= ['f4cf86', 187]
 let s:vc.aqua 				= ['aeee00', 87]
 
 let s:vc.brightyellow 		= ['88633f', 220]
@@ -111,13 +112,13 @@ call s:HL('Search',    'brightred', 'blackestgrey', 'bold')
 call s:HL('IncSearch', 'brightorange', 'blackestgrey',    'bold')
 call s:HL('Underlined', 'fg', '', 'underline')
 call s:HL('StatusLine',   'black', 'brightaqua',     'bold')
-call s:HL('StatusLineNC', 'white', 'deepgrey', 'bold')
-call s:HL('Directory', 'army', '', 'bold')
-call s:HL('Title', 'aqua')
+call s:HL('StatusLineNC', 'brightred', 'deepgrey', 'bold')
+call s:HL('Directory', 'brightred', '', 'bold')
+call s:HL('Title', 'brightorange')
 call s:HL('ErrorMsg',   'brightpurple',       'bg', 'bold')
 call s:HL('MoreMsg',    'brightred',   '',   'bold')
-call s:HL('ModeMsg',    'army', '',   'bold')
-call s:HL('Question',   'army', '',   'bold')
+call s:HL('ModeMsg',    'armylight', '',   'bold')
+call s:HL('Question',   'armylight', '',   'bold')
 call s:HL('WarningMsg', 'brightred',       '',   'bold')
 
 " This is a ctags tag, not an HTML one.  'Something you can use c-] on'.
@@ -151,7 +152,7 @@ call s:HL('Todo',           'white', 'bg', 'bold')
 call s:HL('SpecialComment', 'white', 'bg', 'bold')
 
 " Strings are a nice, pale straw color.  Nothing too fancy.
-call s:HL('String', 'army')
+call s:HL('String', 'armylight')
 
 " Control flow stuff is brightpurple.
 call s:HL('Statement',   'brightpurple', '', 'bold')
@@ -171,10 +172,10 @@ call s:HL('Function',   'lightpurple', '', 'none')
 " grouped together at the beginning of a file.  If they're in the middle of some
 " other code they should stand out, because something tricky is
 " probably going on.
-call s:HL('PreProc',   'aqua', '', 'none')
-call s:HL('Macro',     'aqua', '', 'none')
-call s:HL('Define',    'aqua', '', 'none')
-call s:HL('PreCondit', 'aqua', '', 'bold')
+call s:HL('PreProc',   'brightyellow', '', 'none')
+call s:HL('Macro',     'brightyellow', '', 'none')
+call s:HL('Define',    'brightorange', '', 'none')
+call s:HL('PreCondit', 'brightyellow', '', 'bold')
 
 " Constants of all kinds are colored together.
 " I'm not really happy with the color yet...
@@ -310,11 +311,11 @@ call s:HL('InterestingWord3', 'black', 'brightpurple')
 	call s:HL('clojureAnonArg', 'white', '', 'bold')
 " }}}
 " CSS {{{
-	call s:HL('cssColorProp', 'army', '', 'none')
-	call s:HL('cssBoxProp', 'army', '', 'none')
-	call s:HL('cssTextProp', 'army', '', 'none')
-	call s:HL('cssRenderProp', 'army', '', 'none')
-	call s:HL('cssGeneratedContentProp', 'army', '', 'none')
+	call s:HL('cssColorProp', 'armylight', '', 'none')
+	call s:HL('cssBoxProp', 'armylight', '', 'none')
+	call s:HL('cssTextProp', 'armylight', '', 'none')
+	call s:HL('cssRenderProp', 'armylight', '', 'none')
+	call s:HL('cssGeneratedContentProp', 'armylight', '', 'none')
 	call s:HL('cssValueLength', 'armylight', '', 'bold')
 	call s:HL('cssColor', 'armylight', '', 'bold')
 	call s:HL('cssBraces', 'lightgrey', '', 'none')
@@ -334,25 +335,16 @@ call s:HL('diffLine', 'black', 'lightpurple', 'bold')
 call s:HL('diffSubname', 'lightpurple', '', 'none')
 
 " }}}
-" Django Templates {{{
-
-call s:HL('djangoArgument', 'army', '',)
-call s:HL('djangoTagBlock', 'lightpurple', '')
-call s:HL('djangoVarBlock', 'lightpurple', '')
-" hi djangoStatement guifg=#ff3853 gui=bold
-" hi djangoVarBlock guifg=#f4cf86
-
-" }}}
 " HTML {{{
 
 " Punctuation
-call s:HL('htmlTag',    'lightlightpurple', 'bg', 'none')
-call s:HL('htmlEndTag', 'lightlightpurple', 'bg', 'none')
+call s:HL('htmlTag',    'lightpurple', 'bg', 'none')
+call s:HL('htmlEndTag', 'lightpurple', 'bg', 'none')
 
 " Tag names
 call s:HL('htmlTagName',        'brightpurple', '', 'bold')
 call s:HL('htmlSpecialTagName', 'darkpurple', '', 'bold')
-call s:HL('htmlSpecialChar',    'lightlightpurple',   '', 'none')
+call s:HL('htmlSpecialChar',    'lightpurple',   '', 'none')
 
 " Attributes
 call s:HL('htmlArg', 'darkpurple', '', 'none')
@@ -420,19 +412,19 @@ call s:HL('markdownCodeBlock', 'army', '', 'none')
 " }}}
 " PHP {{{
 
-call s:HL('phpRegionDelimiter', 'brightred', '', 'bold')
-call s:HL('phpPropertySelector', 'brightyellow', '', 'bold')
-call s:HL('phpPropertySelectorInString', 'brightyellow', '', 'bold')
-call s:HL('phpOperator', 'brightyellow', '', 'bold')
-call s:HL('phpArrayPair', 'brightyellow', '', 'bold')
-call s:HL('phpAssignByRef', 'brightyellow', '', 'bold')
-call s:HL('phpRelation', 'brightyellow', '', 'bold')
-call s:HL('phpMemberSelector', 'brightyellow', '', 'bold')
-call s:HL('phpUnknownSelector', 'brightyellow', '', 'bold')
-call s:HL('phpVarSelector', 'brightyellow', '', 'bold')
-call s:HL('phpSemicolon', 'brightyellow', '', 'bold')
-call s:HL('phpFunctions', 'brightyellow', '', 'bold')
-call s:HL('phpParent', 'brightyellow', '', 'bold')
+call s:HL('phpRegionDelimiter', 'brightred', '', 'bold') " php tags
+call s:HL('phpPropertySelector', 'brightorange', '', 'bold')
+call s:HL('phpPropertySelectorInString', 'brightorange', '', 'bold')
+call s:HL('phpOperator', 'brightorange', '', 'bold')
+call s:HL('phpArrayPair', 'brightred', '', 'bold')
+call s:HL('phpAssignByRef', 'brightred', '', 'bold')
+call s:HL('phpRelation', 'brightred', '', 'bold') "need to check
+call s:HL('phpMemberSelector', 'brightorange', '', 'bold')
+call s:HL('phpUnknownSelector', 'brightorange', '', 'bold')
+call s:HL('phpVarSelector', 'lightlightpurple', '', 'bold')
+call s:HL('phpSemicolon', 'lightgrey', '', 'bold')
+call s:HL('phpFunctions', 'brightorange', '', 'bold')
+call s:HL('phpParent', 'white', '', 'bold')
 " }}}
 " MySQL {{{
 
