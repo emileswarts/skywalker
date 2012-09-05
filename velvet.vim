@@ -42,14 +42,17 @@ let s:vc.purple3   	  = ['998f84', 98]
 let s:vc.purple4      = ['998f84', 165]
 let s:vc.purple5   	  = ['998f84', 135]
 
-let s:vc.lightorange  = ['000000', 208]
-let s:vc.brightorange = ['998f84', 166]
+let s:vc.orange1 	  = ['998f84', 166]
+let s:vc.orange2  	  = ['000000', 208]
+
 let s:vc.brightred 	  = ['fade3e', 196]
 let s:vc.brightaqua   = ['ffa724', 45]
-let s:vc.army 		  = ['f4cf86', 101]
-let s:vc.armylight 	  = ['f4cf86', 187]
-let s:vc.aqua 		  = ['aeee00', 87]
 
+let s:vc.army1 		  = ['f4cf86', 65]
+let s:vc.army2 		  = ['f4cf86', 101]
+let s:vc.army3 	  	  = ['f4cf86', 187]
+
+let s:vc.aqua 		  = ['aeee00', 87]
 let s:vc.brightyellow = ['88633f', 220]
 
 " }}}
@@ -117,16 +120,16 @@ let s:vc.brightyellow = ['88633f', 220]
 	call s:HL('Visual',    '',  'grey5')
 	call s:HL('VisualNOS', '',  'grey5')
 	call s:HL('Search',    'brightred', 'grey9', 'bold')
-	call s:HL('IncSearch', 'brightorange', 'grey9',    'bold')
+	call s:HL('IncSearch', 'orange1', 'grey9',    'bold')
 	call s:HL('Underlined', 'fg', '', 'underline')
 	call s:HL('StatusLine',   'black', 'brightaqua',     'bold')
 	call s:HL('StatusLineNC', 'brightred', 'grey5', 'bold')
-	call s:HL('Directory', 'brightorange', '', 'bold')
-	call s:HL('Title', 'brightorange')
+	call s:HL('Directory', 'orange1', '', 'bold')
+	call s:HL('Title', 'orange1')
 	call s:HL('ErrorMsg',   'purple3',       'bg', 'bold')
 	call s:HL('MoreMsg',    'brightred',   '',   'bold')
-	call s:HL('ModeMsg',    'armylight', '',   'bold')
-	call s:HL('Question',   'armylight', '',   'bold')
+	call s:HL('ModeMsg',    'army3', '',   'bold')
+	call s:HL('Question',   'army3', '',   'bold')
 	call s:HL('WarningMsg', 'brightred',       '',   'bold')
 	" This is a ctags tag, not an HTML one.  'Something you can use c-] on'.
 	call s:HL('Tag', '', '', 'bold')
@@ -154,7 +157,7 @@ call s:HL('Special', 'plain')
 call s:HL('Comment',        'grey9')
 call s:HL('Todo',           'white', 'bg', 'bold')
 call s:HL('SpecialComment', 'white', 'bg', 'bold')
-call s:HL('String', 'armylight')
+call s:HL('String', 'army3')
 call s:HL('Statement',   'purple3', '', 'bold')
 call s:HL('Keyword',     'purple3', '', 'bold')
 call s:HL('Conditional', 'purple3', '', 'bold')
@@ -168,7 +171,7 @@ call s:HL('Function',   'purple2', '', 'none')
 
 call s:HL('PreProc',   'brightaqua', '', 'none')
 call s:HL('Macro',     'brightaqua', '', 'none')
-call s:HL('Define',    'lightorange', '', 'none')  "php functions in here
+call s:HL('Define',    'orange2', '', 'none')  "php functions in here
 call s:HL('PreCondit', 'grey5', '', 'bold')
 
 " Constants of all kinds are colored together.
@@ -177,13 +180,13 @@ call s:HL('Constant',  'brightaqua', '', 'bold')
 call s:HL('Character', 'brightaqua', '', 'bold')
 call s:HL('Boolean',   'brightaqua', '', 'bold')
 
-call s:HL('Number', 'brightorange', '', 'bold')
-call s:HL('Float',  'brightorange', '', 'bold')
+call s:HL('Number', 'orange1', '', 'bold')
+call s:HL('Float',  'orange1', '', 'bold')
 
 " Not sure what 'special character in a constant' means, but let's make it pop.
-call s:HL('SpecialChar', 'brightorange', '', 'bold')
+call s:HL('SpecialChar', 'orange1', '', 'bold')
 
-call s:HL('Type', 'brightorange', '', 'none')
+call s:HL('Type', 'orange1', '', 'none')
 call s:HL('StorageClass', 'purple3', '', 'none')
 call s:HL('Structure', 'purple3', '', 'none')
 call s:HL('Typedef', 'purple3', '', 'bold')
@@ -213,7 +216,7 @@ call s:HL('PmenuThumb', 'grey1')
 " SPELLING {{{
 	if has("spell")
 		call s:HL('SpellCap', 'brightred', 'bg', 'undercurl,bold', 'brightred')
-		call s:HL('SpellBad', 'black', '', 'undercurl', 'brightorange')
+		call s:HL('SpellBad', 'black', '', 'undercurl', 'orange1')
 		call s:HL('SpellLocal', '', '', 'undercurl', 'brightred')
 		call s:HL('SpellRare', '', '', 'undercurl', 'brightred')
 	endif
@@ -221,7 +224,7 @@ call s:HL('PmenuThumb', 'grey1')
 " }}}
 " PLUGINS {{{
 " CTRLP {{{
-    call s:HL('CtrlPNoEntries', 'white', 'purple1', 'bold')
+    call s:HL('CtrlPNoEntries', 'white', 'brightred', 'bold')
     call s:HL('CtrlPMatch', 'purple2', 'bg', 'none')
     call s:HL('CtrlPLinePre', 'grey5', 'bg', 'none')
 
@@ -295,13 +298,13 @@ call s:HL('InterestingWord3', 'black', 'purple3')
 	call s:HL('clojureAnonArg', 'white', '', 'bold')
 " }}}
 " CSS {{{
-	call s:HL('cssColorProp', 'armylight', '', 'none')
-	call s:HL('cssBoxProp', 'armylight', '', 'none')
-	call s:HL('cssTextProp', 'armylight', '', 'none')
-	call s:HL('cssRenderProp', 'armylight', '', 'none')
-	call s:HL('cssGeneratedContentProp', 'armylight', '', 'none')
-	call s:HL('cssValueLength', 'armylight', '', 'bold')
-	call s:HL('cssColor', 'armylight', '', 'bold')
+	call s:HL('cssColorProp', 'army3', '', 'none')
+	call s:HL('cssBoxProp', 'army3', '', 'none')
+	call s:HL('cssTextProp', 'army3', '', 'none')
+	call s:HL('cssRenderProp', 'army3', '', 'none')
+	call s:HL('cssGeneratedContentProp', 'army3', '', 'none')
+	call s:HL('cssValueLength', 'army3', '', 'bold')
+	call s:HL('cssColor', 'army3', '', 'bold')
 	call s:HL('cssBraces', 'grey2', '', 'none')
 	call s:HL('cssIdentifier', 'purple2', '', 'bold')
 	call s:HL('cssClassName', 'purple2', '', 'none')
@@ -341,11 +344,11 @@ call s:HL('InterestingWord3', 'black', 'purple3')
 	call s:HL('mailHeader', 'grey2', '', '')
 	call s:HL('mailHeaderKey', 'grey2', '', '')
 	call s:HL('mailHeaderEmail', 'white', '', '')
-	call s:HL('mailURL', 'armylight', '', 'underline')
+	call s:HL('mailURL', 'army3', '', 'underline')
 	call s:HL('mailSignature', 'grey3', '', 'none')
 	call s:HL('mailQuoted1', 'grey3', '', 'none')
 	call s:HL('mailQuoted2', 'brightred', '', 'none')
-	call s:HL('mailQuoted3', 'army', '', 'none')
+	call s:HL('mailQuoted3', 'army1', '', 'none')
 	call s:HL('mailQuoted4', 'purple2', '', 'none')
 	call s:HL('mailQuoted5', 'aqua', '', 'none')
 
@@ -363,48 +366,49 @@ call s:HL('InterestingWord3', 'black', 'purple3')
 	call s:HL('markdownH4', 'aqua', '', 'none')
 	call s:HL('markdownH5', 'aqua', '', 'none')
 	call s:HL('markdownH6', 'aqua', '', 'none')
-	call s:HL('markdownLinkText', 'armylight', '', 'underline')
-	call s:HL('markdownIdDeclaration', 'armylight')
-	call s:HL('markdownAutomaticLink', 'armylight', '', 'bold')
-	call s:HL('markdownUrl', 'armylight', '', 'bold')
+	call s:HL('markdownLinkText', 'army3', '', 'underline')
+	call s:HL('markdownIdDeclaration', 'army3')
+	call s:HL('markdownAutomaticLink', 'army3', '', 'bold')
+	call s:HL('markdownUrl', 'army3', '', 'bold')
 	call s:HL('markdownUrldelimiter', 'grey2', '', 'bold')
 	call s:HL('markdownLinkDelimiter', 'grey2', '', 'bold')
 	call s:HL('markdownLinkTextDelimiter', 'grey2', '', 'bold')
-	call s:HL('markdownCodeDelimiter', 'army', '', 'bold')
-	call s:HL('markdownCode', 'army', '', 'none')
-	call s:HL('markdownCodeBlock', 'army', '', 'none')
+	call s:HL('markdownCodeDelimiter', 'army2', '', 'bold')
+	call s:HL('markdownCode', 'army2', '', 'none')
+	call s:HL('markdownCodeBlock', 'army2', '', 'none')
 " }}}
 " PHP {{{
 	call s:HL('phpRegionDelimiter', 'brightred', '', 'bold') " php tags
-	call s:HL('phpPropertySelector', 'brightorange', '', 'bold')
-	call s:HL('phpPropertySelectorInString', 'brightorange', '', 'bold')
-	call s:HL('phpOperator', 'brightorange', '', 'bold')
+	call s:HL('phpPropertySelector', 'orange1', '', 'bold')
+	call s:HL('phpPropertySelectorInString', 'orange1', '', 'bold')
+	call s:HL('phpOperator', 'orange1', '', 'bold')
 	call s:HL('phpArrayPair', 'brightred', '', 'bold')
 	call s:HL('phpAssignByRef', 'brightred', '', 'bold')
 	call s:HL('phpRelation', 'brightred', '', 'bold') "need to check
-	call s:HL('phpMemberSelector', 'brightorange', '', 'bold')
-	call s:HL('phpUnknownSelector', 'brightorange', '', 'bold')
+	call s:HL('phpMemberSelector', 'orange1', '', 'bold')
+	call s:HL('phpUnknownSelector', 'orange1', '', 'bold')
 	call s:HL('phpVarSelector', 'purple5', '', 'bold')
 	call s:HL('phpSemicolon', 'grey2', '', 'bold')
-	call s:HL('phpFunctions', 'brightorange', '', 'bold')
+	call s:HL('phpFunctions', 'orange1', '', 'bold')
 	call s:HL('phpParent', 'white', '', 'bold')
 " }}}
 " RUBY {{{
 	call s:HL('railsMethod', 'purple3', '', 'bold')
 	call s:HL('rubyDefine', 'purple3', '', 'bold')
-	call s:HL('rubySymbol', 'purple1', '', 'bold')
-	call s:HL('rubyAccess', 'brightyellow', '', 'bold')
+	call s:HL('rubyDescribe', 'purple3', '', 'bold')
+	call s:HL('rubySymbol', 'purple2', '', 'bold')
+	call s:HL('rubyAccess', 'brightaqua', '', 'bold')
 	call s:HL('rubyAttribute', 'brightyellow', '', 'bold')
 	call s:HL('rubyEval', 'brightyellow', '', 'bold')
 	call s:HL('rubyException', 'brightyellow', '', 'bold')
-	call s:HL('rubyInclude', 'brightyellow', '', 'bold')
-	call s:HL('rubyStringDelimiter', 'brightyellow', '', 'bold')
-	call s:HL('rubyRegexp', 'brightyellow', '', 'bold')
-	call s:HL('rubyRegexpDelimiter', 'brightyellow', '', 'bold')
-	call s:HL('rubyConstant', 'brightorange', '', 'bold')
+	call s:HL('rubyInclude', 'purple1', '', 'bold')
+	call s:HL('rubyStringDelimiter', 'army2', '', 'bold')
+	call s:HL('rubyRegexp', 'army1', '', 'bold')
+	call s:HL('rubyRegexpDelimiter', 'army2', '', 'bold')
+	call s:HL('rubyConstant', 'orange1', '', 'bold')
 	call s:HL('rubyGlobalVariable', 'brightyellow', '', 'bold')
 	call s:HL('rubyClassVariable', 'brightyellow', '', 'bold')
-	call s:HL('rubyInstanceVariable', 'brightaqua', '', 'bold')
+	call s:HL('rubyInstanceVariable', 'army2', '', 'bold')
 " }}}
 " MySQL {{{
 	call s:HL('mysqlSpecial', 'brightaqua', '', 'bold')
