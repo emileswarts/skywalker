@@ -18,6 +18,7 @@ let g:colors_name = "velvet"
 " DEFINE COLOURS {{{
 
 "Colors go from dark to light.  1 being darkest
+"Anything marked as bright yellow (should not be much) is still a work in progress
 
 let s:vc = {}
 let s:vc.plain 		  = ['ffffff', 15]
@@ -53,47 +54,47 @@ let s:vc.brightyellow = ['88633f', 220]
 
 " }}}
 " CATCH BLACK BACKGROUND {{{
-if ! exists("g:velvet_black_background")
-    let g:velvet_black_background = 0
-endif
+	if ! exists("g:velvet_black_background")
+		let g:velvet_black_background = 0
+	endif
 "}}}
 " HIGHLIGHTING FUNCTION {{{
-function! s:HL(group, fg, ...)
-    " Arguments: group, guifg, guibg, gui, guisp
+	function! s:HL(group, fg, ...)
+		" Arguments: group, guifg, guibg, gui, guisp
 
-    let histring = 'hi ' . a:group . ' '
+		let histring = 'hi ' . a:group . ' '
 
-    if strlen(a:fg)
-        if a:fg == 'fg'
-            let histring .= 'guifg=fg ctermfg=fg '
-        else
-            let c = get(s:vc, a:fg)
-            let histring .= 'guifg=#' . c[0] . ' ctermfg=' . c[1] . ' '
-        endif
-    endif
+		if strlen(a:fg)
+			if a:fg == 'fg'
+				let histring .= 'guifg=fg ctermfg=fg '
+			else
+				let c = get(s:vc, a:fg)
+				let histring .= 'guifg=#' . c[0] . ' ctermfg=' . c[1] . ' '
+			endif
+		endif
 
-    if a:0 >= 1 && strlen(a:1)
-        if a:1 == 'bg'
-            let histring .= 'guibg=bg ctermbg=bg '
-        else
-            let c = get(s:vc, a:1)
-            let histring .= 'guibg=#' . c[0] . ' ctermbg=' . c[1] . ' '
-        endif
-    endif
+		if a:0 >= 1 && strlen(a:1)
+			if a:1 == 'bg'
+				let histring .= 'guibg=bg ctermbg=bg '
+			else
+				let c = get(s:vc, a:1)
+				let histring .= 'guibg=#' . c[0] . ' ctermbg=' . c[1] . ' '
+			endif
+		endif
 
-    if a:0 >= 2 && strlen(a:2)
-        let histring .= 'gui=' . a:2 . ' cterm=' . a:2 . ' '
-    endif
+		if a:0 >= 2 && strlen(a:2)
+			let histring .= 'gui=' . a:2 . ' cterm=' . a:2 . ' '
+		endif
 
-    if a:0 >= 3 && strlen(a:3)
-        let c = get(s:vc, a:3)
-        let histring .= 'guisp=#' . c[0] . ' '
-    endif
+		if a:0 >= 3 && strlen(a:3)
+			let c = get(s:vc, a:3)
+			let histring .= 'guisp=#' . c[0] . ' '
+		endif
 
-    " echom histring
+		" echom histring
 
-    execute histring
-endfunction
+		execute histring
+	endfunction
 " }}}
 " CONFIGURATION OPTIONS {{{
 	if exists('g:velvet_black') && g:velvet_black
@@ -104,49 +105,47 @@ endfunction
 " }}}
 " VANILLA VIM {{{
 " GENERAL/UI {{{
+	call s:HL('Normal', 'plain', 'grey9')
+	call s:HL('Folded', 'grey4', 'bg', 'none')
+	call s:HL('VertSplit', 'grey2', 'bg', 'none')
+	call s:HL('CursorLine',   '', 'grey8', 'none')
+	call s:HL('CursorColumn', '', 'grey8')
+	call s:HL('ColorColumn',  '', 'grey7')
+	call s:HL('MatchParen', 'brightred', 'grey9', 'bold')
+	call s:HL('NonText',    'grey5', 'bg')
+	call s:HL('SpecialKey', 'grey5', 'bg')
+	call s:HL('Visual',    '',  'grey5')
+	call s:HL('VisualNOS', '',  'grey5')
+	call s:HL('Search',    'brightred', 'grey9', 'bold')
+	call s:HL('IncSearch', 'brightorange', 'grey9',    'bold')
+	call s:HL('Underlined', 'fg', '', 'underline')
+	call s:HL('StatusLine',   'black', 'brightaqua',     'bold')
+	call s:HL('StatusLineNC', 'brightred', 'grey5', 'bold')
+	call s:HL('Directory', 'brightorange', '', 'bold')
+	call s:HL('Title', 'brightorange')
+	call s:HL('ErrorMsg',   'purple3',       'bg', 'bold')
+	call s:HL('MoreMsg',    'brightred',   '',   'bold')
+	call s:HL('ModeMsg',    'armylight', '',   'bold')
+	call s:HL('Question',   'armylight', '',   'bold')
+	call s:HL('WarningMsg', 'brightred',       '',   'bold')
+	" This is a ctags tag, not an HTML one.  'Something you can use c-] on'.
+	call s:HL('Tag', '', '', 'bold')
 
-call s:HL('Normal', 'plain', 'grey9')
-call s:HL('Folded', 'grey4', 'bg', 'none')
-call s:HL('VertSplit', 'grey2', 'bg', 'none')
-call s:HL('CursorLine',   '', 'grey8', 'none')
-call s:HL('CursorColumn', '', 'grey8')
-call s:HL('ColorColumn',  '', 'grey7')
-call s:HL('MatchParen', 'brightred', 'grey9', 'bold')
-call s:HL('NonText',    'grey5', 'bg')
-call s:HL('SpecialKey', 'grey5', 'bg')
-call s:HL('Visual',    '',  'grey5')
-call s:HL('VisualNOS', '',  'grey5')
-call s:HL('Search',    'brightred', 'grey9', 'bold')
-call s:HL('IncSearch', 'brightorange', 'grey9',    'bold')
-call s:HL('Underlined', 'fg', '', 'underline')
-call s:HL('StatusLine',   'black', 'brightaqua',     'bold')
-call s:HL('StatusLineNC', 'brightred', 'grey5', 'bold')
-call s:HL('Directory', 'brightred', '', 'bold')
-call s:HL('Title', 'brightorange')
-call s:HL('ErrorMsg',   'purple3',       'bg', 'bold')
-call s:HL('MoreMsg',    'brightred',   '',   'bold')
-call s:HL('ModeMsg',    'armylight', '',   'bold')
-call s:HL('Question',   'armylight', '',   'bold')
-call s:HL('WarningMsg', 'brightred',       '',   'bold')
-
-" This is a ctags tag, not an HTML one.  'Something you can use c-] on'.
-call s:HL('Tag', '', '', 'bold')
-
-" hi IndentGuides                  guibg=#373737
-" hi WildMenu        guifg=#66D9EF guibg=#000000
+	call s:HL('WildMenu', 'grey5', '',   'bold')
+	call s:HL('IndentGuides', 'grey5', '',   'bold')
 
 " }}}
 " BLACKNESS {{{
-call s:HL('LineNr',     'grey4', s:darkness)
-call s:HL('SignColumn', '', s:darkness)
-call s:HL('FoldColumn', 'grey4', s:darkness)
+	call s:HL('LineNr',     'grey4', s:darkness)
+	call s:HL('SignColumn', '', s:darkness)
+	call s:HL('FoldColumn', 'grey4', s:darkness)
 
 " }}}
-" Cursor {{{
+" CURSOR {{{
 
-call s:HL('Cursor',  'black', 'brightaqua', 'bold')
-call s:HL('vCursor', 'black', 'brightaqua', 'bold')
-call s:HL('iCursor', 'black', 'brightaqua', 'none')
+	call s:HL('Cursor',  'black', 'brightaqua', 'bold')
+	call s:HL('vCursor', 'black', 'brightaqua', 'bold')
+	call s:HL('iCursor', 'black', 'brightaqua', 'none')
 
 " }}}
 " SYNTAX HIGHLIGHTING {{{
@@ -170,7 +169,7 @@ call s:HL('Function',   'purple2', '', 'none')
 call s:HL('PreProc',   'brightaqua', '', 'none')
 call s:HL('Macro',     'brightaqua', '', 'none')
 call s:HL('Define',    'lightorange', '', 'none')  "php functions in here
-call s:HL('PreCondit', 'brightyellow', '', 'bold')
+call s:HL('PreCondit', 'grey5', '', 'bold')
 
 " Constants of all kinds are colored together.
 " I'm not really happy with the color yet...
@@ -205,34 +204,25 @@ call s:HL('PmenuSbar', '', 'grey6')
 call s:HL('PmenuThumb', 'grey1')
 
 " }}}
-" Diffs {{{
-
-call s:HL('DiffDelete', 'black', 'black')
-call s:HL('DiffAdd',    '',     'grey6')
-call s:HL('DiffChange', '',     'grey7')
-call s:HL('DiffText',   'white', 'grey6', 'bold')
-
+" DIFFS {{{
+	call s:HL('DiffDelete', 'black', 'black')
+	call s:HL('DiffAdd',    '',     'grey6')
+	call s:HL('DiffChange', '',     'grey7')
+	call s:HL('DiffText',   'white', 'grey6', 'bold')
 " }}}
-" Spelling {{{
-
-if has("spell")
-    call s:HL('SpellCap', 'brightred', 'bg', 'undercurl,bold', 'brightred')
-    call s:HL('SpellBad', 'black', '', 'undercurl', 'brightorange')
-    call s:HL('SpellLocal', '', '', 'undercurl', 'brightred')
-    call s:HL('SpellRare', '', '', 'undercurl', 'brightred')
-endif
-
+" SPELLING {{{
+	if has("spell")
+		call s:HL('SpellCap', 'brightred', 'bg', 'undercurl,bold', 'brightred')
+		call s:HL('SpellBad', 'black', '', 'undercurl', 'brightorange')
+		call s:HL('SpellLocal', '', '', 'undercurl', 'brightred')
+		call s:HL('SpellRare', '', '', 'undercurl', 'brightred')
+	endif
 " }}}
-
 " }}}
-" Plugins {{{
-" CtrlP {{{
-    " the message when no match is found
+" PLUGINS {{{
+" CTRLP {{{
     call s:HL('CtrlPNoEntries', 'white', 'purple1', 'bold')
-    " the matched pattern
     call s:HL('CtrlPMatch', 'purple2', 'bg', 'none')
-
-    " the line prefix '>' in the match window
     call s:HL('CtrlPLinePre', 'grey5', 'bg', 'none')
 
     " the prompt’s base
@@ -399,6 +389,23 @@ call s:HL('InterestingWord3', 'black', 'purple3')
 	call s:HL('phpFunctions', 'brightorange', '', 'bold')
 	call s:HL('phpParent', 'white', '', 'bold')
 " }}}
+" RUBY {{{
+	call s:HL('railsMethod', 'purple3', '', 'bold')
+	call s:HL('rubyDefine', 'purple3', '', 'bold')
+	call s:HL('rubySymbol', 'purple1', '', 'bold')
+	call s:HL('rubyAccess', 'brightyellow', '', 'bold')
+	call s:HL('rubyAttribute', 'brightyellow', '', 'bold')
+	call s:HL('rubyEval', 'brightyellow', '', 'bold')
+	call s:HL('rubyException', 'brightyellow', '', 'bold')
+	call s:HL('rubyInclude', 'brightyellow', '', 'bold')
+	call s:HL('rubyStringDelimiter', 'brightyellow', '', 'bold')
+	call s:HL('rubyRegexp', 'brightyellow', '', 'bold')
+	call s:HL('rubyRegexpDelimiter', 'brightyellow', '', 'bold')
+	call s:HL('rubyConstant', 'brightorange', '', 'bold')
+	call s:HL('rubyGlobalVariable', 'brightyellow', '', 'bold')
+	call s:HL('rubyClassVariable', 'brightyellow', '', 'bold')
+	call s:HL('rubyInstanceVariable', 'brightaqua', '', 'bold')
+" }}}
 " MySQL {{{
 	call s:HL('mysqlSpecial', 'brightaqua', '', 'bold')
 " }}}
@@ -424,4 +431,3 @@ call s:HL('InterestingWord3', 'black', 'purple3')
 	call s:HL('VimError', 'brightred', '', 'none')
 " }}}
 " }}}
-
