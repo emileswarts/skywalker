@@ -17,8 +17,8 @@ let g:colors_name = "velvet"
 "}}}
 " DEFINE COLOURS {{{
 
-"Colors go from dark to light.  1 being darkest
-"Anything marked as bright yellow (should not be much) is still a work in progress
+"Colors go from dark to light.  1 being the darkest
+"Anything marked as bright yellow (should not be much) is still a work in progress and has not showed up in my testing
 
 let s:vc = {}
 let s:vc.plain 		  = ['ffffff', 15]
@@ -322,9 +322,9 @@ call s:HL('InterestingWord3', 'black', 'purple3')
 	call s:HL('htmlTag',    'purple2', 'bg', 'none')
 	call s:HL('htmlEndTag', 'purple2', 'bg', 'none')
 	call s:HL('htmlTagName',        'purple3', '', 'bold')
-	call s:HL('htmlSpecialTagName', 'purple1', '', 'bold')
+	call s:HL('htmlSpecialTagName', 'purple2', '', 'bold')
 	call s:HL('htmlSpecialChar',    'purple2',   '', 'none')
-	call s:HL('htmlArg', 'purple1', '', 'none')
+	call s:HL('htmlArg', 'purple2', '', 'none')
 	" Stuff inside an <a> tag
 	call s:HL('htmlLink', 'grey2', '', 'underline')
 
@@ -401,7 +401,7 @@ call s:HL('InterestingWord3', 'black', 'purple3')
 	call s:HL('rubyAttribute', 'brightyellow', '', 'bold')
 	call s:HL('rubyEval', 'brightyellow', '', 'bold')
 	call s:HL('rubyException', 'brightyellow', '', 'bold')
-	call s:HL('rubyInclude', 'purple1', '', 'bold')
+	call s:HL('rubyInclude', 'purple2', '', 'bold')
 	call s:HL('rubyStringDelimiter', 'army2', '', 'bold')
 	call s:HL('rubyRegexp', 'army1', '', 'bold')
 	call s:HL('rubyRegexpDelimiter', 'army2', '', 'bold')
