@@ -21,7 +21,6 @@ let g:colors_name = "velvet"
 "Anything marked as bright yellow (should not be much) is still a work in progress and has not showed up in my testing
 
 let s:vc = {}
-let s:vc.plain 		  = ['ffffff', 15]
 let s:vc.white 		  = ['ffffff', 15]
 
 let s:vc.grey1   	  = ['d9cec3', 252]
@@ -41,11 +40,13 @@ let s:vc.purple2      = ['998f84', 93]
 let s:vc.purple3   	  = ['998f84', 98]
 let s:vc.purple4      = ['998f84', 165]
 let s:vc.purple5   	  = ['998f84', 135]
+let s:vc.lilac   	  = ['998f84', 198]
 
 let s:vc.orange1 	  = ['998f84', 166]
 let s:vc.orange2  	  = ['000000', 208]
 
 let s:vc.brightred 	  = ['fade3e', 196]
+let s:vc.tomato 	  = ['fade3e', 160]
 let s:vc.brightaqua   = ['ffa724', 45]
 
 let s:vc.army1 		  = ['f4cf86', 65]
@@ -108,7 +109,7 @@ let s:vc.brightyellow = ['88633f', 220]
 " }}}
 " VANILLA VIM {{{
 " GENERAL/UI {{{
-	call s:HL('Normal', 'plain', 'grey9')
+	call s:HL('Normal', 'white', 'grey9')
 	call s:HL('Folded', 'grey4', 'bg', 'none')
 	call s:HL('VertSplit', 'grey2', 'bg', 'none')
 	call s:HL('CursorLine',   '', 'grey8', 'none')
@@ -120,7 +121,7 @@ let s:vc.brightyellow = ['88633f', 220]
 	call s:HL('Visual',    '',  'grey5')
 	call s:HL('VisualNOS', '',  'grey5')
 	call s:HL('Search',    'brightred', 'grey9', 'bold')
-	call s:HL('IncSearch', 'orange1', 'grey9',    'bold')
+	call s:HL('IncSearch', 'tomato', 'grey9',    'bold')
 	call s:HL('Underlined', 'fg', '', 'underline')
 	call s:HL('StatusLine',   'black', 'brightaqua',     'bold')
 	call s:HL('StatusLineNC', 'brightred', 'grey5', 'bold')
@@ -153,7 +154,7 @@ let s:vc.brightyellow = ['88633f', 220]
 " }}}
 " SYNTAX HIGHLIGHTING {{{
 
-call s:HL('Special', 'plain')
+call s:HL('Special', 'white')
 call s:HL('Comment',        'grey9')
 call s:HL('Todo',           'white', 'bg', 'bold')
 call s:HL('SpecialComment', 'white', 'bg', 'bold')
@@ -165,7 +166,6 @@ call s:HL('Operator',    'purple3', '', 'none')
 call s:HL('Label',       'purple3', '', 'none')
 call s:HL('Repeat',      'purple3', '', 'none')
 
-" Functions and variable declarations are aqua, because plain looks weird.
 call s:HL('Identifier', 'purple2', '', 'none')
 call s:HL('Function',   'purple2', '', 'none')
 
@@ -201,10 +201,11 @@ call s:HL('Ignore', 'grey3', '',      '')
 
 " }}}
 " COMPLETION MENU {{{
-call s:HL('Pmenu', 'plain', 'grey6')
-call s:HL('PmenuSel', 'black', 'brightaqua', 'bold')
-call s:HL('PmenuSbar', '', 'grey6')
-call s:HL('PmenuThumb', 'grey1')
+call s:HL('Pmenu', 'white', 'grey7')
+call s:HL('PmenuSel', 'brightred', 'grey8')
+call s:HL('PmenuSbar', '', 'grey4')
+call s:HL('PmenuThumb', 'brightyellow')
+
 
 " }}}
 " DIFFS {{{
@@ -232,7 +233,7 @@ call s:HL('PmenuThumb', 'grey1')
     call s:HL('CtrlPPrtBase', 'grey5', 'bg', 'none')
 
     " the prompt’s text
-    call s:HL('CtrlPPrtText', 'plain', 'bg', 'none')
+    call s:HL('CtrlPPrtText', 'white', 'bg', 'none')
 
     " the prompt’s cursor when moving over the text
     call s:HL('CtrlPPrtCursor', 'black', 'brightaqua', 'bold')
