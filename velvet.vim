@@ -26,12 +26,12 @@ let s:vc.pidgeon   	  		  	= ['e3d8dc', 252] " 2
 let s:vc.mac    	  		  	= ['d1cfd0', 245] " 3 
 let s:vc.crane 		  		  	= ['b3b1b1', 242] " 4
 let s:vc.shuttle   	  		  	= ['666462', 240] " 5
-let s:vc.grey5     	  		  	= ['45413b', 238] " 6 
+let s:vc.tank     	  		  	= ['45413b', 238] " 6 
 let s:vc.grey6   	  		  	= ['35322d', 236] " 7 
 let s:vc.grey7     	  			= ['242321', 235] " 8 
 let s:vc.grey8    	  			= ['1c1b1a', 233] " 9 
 let s:vc.offblack 		  		= ['141413', 232] " 111 
-let s:vc.rhino 		  			= ['000000', 16]  " 000
+let s:vc.rhino 		  			= ['238', 238]  " 000
 let s:vc.pink 		  			= ['000000', 197]                          
 
 let s:vc.purple1      = ['998f84', 57]
@@ -115,15 +115,15 @@ call s:HL('CursorLine',   '', 'grey7', 'none')
 call s:HL('CursorColumn', '', 'grey7')
 call s:HL('ColorColumn',  '', 'grey7')
 call s:HL('MatchParen', 'brightred', 'offblack', 'bold')
-call s:HL('NonText',    'grey5', 'bg')
-call s:HL('SpecialKey', 'grey5', 'bg')
-call s:HL('Visual',    '',  'grey5')
-call s:HL('VisualNOS', '',  'grey5')
+call s:HL('NonText',    'tank', 'bg')
+call s:HL('SpecialKey', 'tank', 'bg')
+call s:HL('Visual',    '',  'tank')
+call s:HL('VisualNOS', '',  'tank')
 call s:HL('Search',    'brightred', 'grey8', 'bold')
 call s:HL('IncSearch', 'tomato', 'grey8',    'bold')
 call s:HL('Underlined', 'fg', '', 'underline')
 call s:HL('StatusLine',   'rhino', 'archlinux',     'bold')
-call s:HL('StatusLineNC', 'brightred', 'grey5', 'bold')
+call s:HL('StatusLineNC', 'brightred', 'tank', 'bold')
 call s:HL('Directory', 'orange1', '', 'bold')
 call s:HL('Title', 'orange1')
 call s:HL('ErrorMsg',   'purple3',       'bg', 'bold')
@@ -134,8 +134,8 @@ call s:HL('WarningMsg', 'brightred',       '',   'bold')
 " This is a ctags tag, not an HTML one.  'Something you can use c-] on'.
 call s:HL('Tag', '', '', 'bold')
 
-call s:HL('WildMenu', 'grey5', '',   'bold')
-call s:HL('IndentGuides', 'grey5', '',   'bold')
+call s:HL('WildMenu', 'tank', '',   'bold')
+call s:HL('IndentGuides', 'tank', '',   'bold')
 
 " }}}
 " BLACKNESS {{{
@@ -171,7 +171,7 @@ call s:HL('Function',   'purple2', '', 'none')
 call s:HL('PreProc',   'archlinux', '', 'none')
 call s:HL('Macro',     'archlinux', '', 'none')
 call s:HL('Define',    'orange2', '', 'none')  "php functions in here
-call s:HL('PreCondit', 'grey5', '', 'bold')
+call s:HL('PreCondit', 'tank', '', 'bold')
 
 " Constants of all kinds are colored together.
 " I'm not really happy with the color yet...
@@ -226,10 +226,10 @@ endif
 " CTRLP {{{
 call s:HL('CtrlPNoEntries', 'tokyowhite', 'brightred', 'bold')
 call s:HL('CtrlPMatch', 'purple2', 'bg', 'none')
-call s:HL('CtrlPLinePre', 'grey5', 'bg', 'none')
+call s:HL('CtrlPLinePre', 'tank', 'bg', 'none')
 
 " the prompt’s base
-call s:HL('CtrlPPrtBase', 'grey5', 'bg', 'none')
+call s:HL('CtrlPPrtBase', 'tank', 'bg', 'none')
 
 " the prompt’s text
 call s:HL('CtrlPPrtText', 'tokyowhite', 'bg', 'none')
@@ -257,7 +257,7 @@ call s:HL('CtrlPStats', 'rhino', 'archlinux', 'bold')
 " EasyMotion {{{
 
 call s:HL('EasyMotionTarget', 'archlinux',     'bg', 'bold')
-call s:HL('EasyMotionShade',  'grey5', 'bg')
+call s:HL('EasyMotionShade',  'tank', 'bg')
 
 " }}}
 " Interesting Words {{{
