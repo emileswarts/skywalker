@@ -27,9 +27,9 @@ let s:vc.mac    	  		  	= ['d1cfd0', 245] " 3
 let s:vc.crane 		  		  	= ['b3b1b1', 242] " 4
 let s:vc.shuttle   	  		  	= ['666462', 240] " 5
 let s:vc.tank     	  		  	= ['45413b', 238] " 6 
-let s:vc.grey6   	  		  	= ['35322d', 236] " 7 
-let s:vc.grey7     	  			= ['242321', 235] " 8 
-let s:vc.grey8    	  			= ['1c1b1a', 233] " 9 
+let s:vc.sneaker   	  		  	= ['35322d', 236] " 7 
+let s:vc.tile     	  			= ['242321', 235] " 8 
+let s:vc.coal    	  			= ['1c1b1a', 233] " 9 
 let s:vc.offblack 		  		= ['141413', 232] " 111 
 let s:vc.rhino 		  			= ['238', 238]  " 000
 let s:vc.pink 		  			= ['000000', 197]                          
@@ -103,24 +103,24 @@ endfunction
 if exists('g:velvet_black') && g:velvet_black
 	let s:darkness = 'shuttle'
 else
-	let s:darkness = 'grey8'
+	let s:darkness = 'coal'
 endif
 " }}}
 " VANILLA VIM {{{
 " GENERAL/UI {{{
-call s:HL('Normal', 'tokyowhite', 'grey8')
+call s:HL('Normal', 'tokyowhite', 'coal')
 call s:HL('Folded', 'shuttle', 'bg', 'none')
 call s:HL('VertSplit', 'mac', 'bg', 'none')
-call s:HL('CursorLine',   '', 'grey7', 'none')
-call s:HL('CursorColumn', '', 'grey7')
-call s:HL('ColorColumn',  '', 'grey7')
+call s:HL('CursorLine',   '', 'tile', 'none')
+call s:HL('CursorColumn', '', 'tile')
+call s:HL('ColorColumn',  '', 'tile')
 call s:HL('MatchParen', 'brightred', 'offblack', 'bold')
 call s:HL('NonText',    'tank', 'bg')
 call s:HL('SpecialKey', 'tank', 'bg')
 call s:HL('Visual',    '',  'tank')
 call s:HL('VisualNOS', '',  'tank')
-call s:HL('Search',    'brightred', 'grey8', 'bold')
-call s:HL('IncSearch', 'tomato', 'grey8',    'bold')
+call s:HL('Search',    'brightred', 'coal', 'bold')
+call s:HL('IncSearch', 'tomato', 'coal',    'bold')
 call s:HL('Underlined', 'fg', '', 'underline')
 call s:HL('StatusLine',   'rhino', 'archlinux',     'bold')
 call s:HL('StatusLineNC', 'brightred', 'tank', 'bold')
@@ -200,8 +200,8 @@ call s:HL('Ignore', 'crane', '',      '')
 
 " }}}
 " COMPLETION MENU {{{
-call s:HL('Pmenu', 'tokyowhite', 'grey7')
-call s:HL('PmenuSel', 'brightred', 'grey8')
+call s:HL('Pmenu', 'tokyowhite', 'tile')
+call s:HL('PmenuSel', 'brightred', 'coal')
 call s:HL('PmenuSbar', '', 'shuttle')
 call s:HL('PmenuThumb', 'archlinux')
 
@@ -209,9 +209,9 @@ call s:HL('PmenuThumb', 'archlinux')
 " }}}
 " DIFFS {{{
 call s:HL('DiffDelete', 'rhino', 'rhino')
-call s:HL('DiffAdd',    '',     'grey6')
-call s:HL('DiffChange', '',     'grey7')
-call s:HL('DiffText',   'tokyowhite', 'grey6', 'bold')
+call s:HL('DiffAdd',    '',     'sneaker')
+call s:HL('DiffChange', '',     'tile')
+call s:HL('DiffText',   'tokyowhite', 'sneaker', 'bold')
 " }}}
 " SPELLING {{{
 if has("spell")
@@ -273,10 +273,10 @@ call s:HL('InterestingWord3', 'rhino', 'purple3')
 
 " }}}
 " ShowMarks {{{
-call s:HL('ShowMarksHLl', 'archlinux', 'grey8')
-call s:HL('ShowMarksHLu', 'archlinux', 'grey8')
-call s:HL('ShowMarksHLo', 'archlinux', 'grey8')
-call s:HL('ShowMarksHLm', 'archlinux', 'grey8')
+call s:HL('ShowMarksHLl', 'archlinux', 'coal')
+call s:HL('ShowMarksHLu', 'archlinux', 'coal')
+call s:HL('ShowMarksHLo', 'archlinux', 'coal')
+call s:HL('ShowMarksHLm', 'archlinux', 'coal')
 " }}}
 
 " }}}
