@@ -155,7 +155,7 @@ call s:HL('iCursor', 'rhino', 'archlinux', 'none')
 " SYNTAX HIGHLIGHTING {{{
 
 call s:HL('Special', 'tokyowhite')
-call s:HL('Comment',        'offblack')
+call s:HL('Comment', 'sneaker', 'coal')
 call s:HL('Todo',           'tokyowhite', 'bg', 'bold')
 call s:HL('SpecialComment', 'tokyowhite', 'bg', 'bold')
 call s:HL('String', 'army3')
