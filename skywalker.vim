@@ -1,6 +1,6 @@
 " Maintainer:   Emile Swarts
 " Last Change:  2012/10/04
-" URL: https://github.com/emileswarts/velvet-vim-colourscheme
+" URL: https://github.com/emileswarts/skywalker
 "
 " SETUP {{{
 set background=dark
@@ -13,7 +13,7 @@ if version > 580
 	endif
 endif
 
-let g:colors_name = "velvet"
+let g:colors_name = "skywalker"
 "}}}
 " DEFINE COLOURS {{{
 
@@ -61,8 +61,8 @@ let s:vc.brightyellow			= ['E5FF00', 220]
 
 " }}}
 " CATCH BLACK BACKGROUND {{{
-if ! exists("g:velvet_black_background")
-	let g:velvet_black_background = 0
+if ! exists("g:skywalker_black_background")
+	let g:skywalker_black_background = 0
 endif
 "}}}
 " HIGHLIGHTING FUNCTION {{{
@@ -104,7 +104,7 @@ function! s:HL(group, fg, ...)
 endfunction
 " }}}
 " CONFIGURATION OPTIONS {{{
-if exists('g:velvet_black') && g:velvet_black
+if exists('g:skywalker_black') && g:skywalker_black
 	let s:darkness = 'shuttle'
 else
 	let s:darkness = 'coal'
