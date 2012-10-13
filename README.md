@@ -43,4 +43,3 @@ Having trouble with your colourscheme? Add an issue, and I will look at it asap.
 
 ### License
 MIT
-Having trouble with your colourscheme? Add an issue, and I will look at it asap.
