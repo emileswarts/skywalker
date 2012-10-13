@@ -21,43 +21,43 @@ let g:colors_name = "velvet"
 "Anything marked as bright yellow (should not be much) is still a work in progress and has not showed up in my testing
 
 let s:vc = {}
-let s:vc.tokyowhite 		  	= ['ffffff', 15]  " 1
-let s:vc.pidgeon   	  		  	= ['e3d8dc', 252] " 2 
-let s:vc.mac    	  		  	= ['d1cfd0', 245] " 3 
-let s:vc.crane 		  		  	= ['b3b1b1', 242] " 4
-let s:vc.shuttle   	  		  	= ['666462', 240] " 5
-let s:vc.tank     	  		  	= ['45413b', 238] " 6 
-let s:vc.sneaker   	  		  	= ['35322d', 236] " 7 
-let s:vc.tile     	  			= ['242321', 235] " 8 
-let s:vc.coal    	  			= ['1c1b1a', 233] " 9 
-let s:vc.offblack 		  		= ['141413', 232] " 111 
-let s:vc.rhino 		  			= ['238', 238]  " 000
-let s:vc.pink 		  			= ['000000', 197]                          
+let s:vc.tokyowhite 		  	= ['FFFFFF', 15]  " 1
+let s:vc.pidgeon   	  		  	= ['EBE8E9', 252] " 2 
+let s:vc.mac    	  		  	= ['C9C9C9', 245] " 3 
+let s:vc.crane 		  		  	= ['B8B6B7', 242] " 4
+let s:vc.shuttle   	  		  	= ['ABA9AA', 240] " 5
+let s:vc.tank     	  		  	= ['757474', 238] " 6 
+let s:vc.sneaker   	  		  	= ['6B6A6A', 236] " 7 
+let s:vc.tile     	  			= ['666565', 235] " 8 
+let s:vc.coal    	  			= ['242321', 233] " 9 
+let s:vc.offblack 		  		= ['333333', 232] " 111 
+let s:vc.rhino 		  			= ['3D3D3D', 238]  " 000
+let s:vc.pink 		  			= ['FF036C', 197]                          
 
-let s:vc.lipstick      			= ['998f84', 201]
-let s:vc.purpleghost      			= ['998f84', 93]
-let s:vc.palepurple   	 			= ['998f84', 98]
-let s:vc.chapiepurple     			= ['998f84', 165]
-let s:vc.purple5   	 			= ['998f84', 135]
-let s:vc.lilac   	 			= ['998f84', 198]
+let s:vc.lipstick      			= ['FF03D9', 201]
+let s:vc.purpleghost      		= ['C003FF', 93]
+let s:vc.palepurple   	 		= ['DA7AFA', 98]
+let s:vc.lotus     				= ['E543FA', 165]
+let s:vc.peyote   	 			= ['CD7CFC', 135]
+let s:vc.lilac   	 			= ['E94AF7', 198]
 
-let s:vc.orange1 	 			= ['998f84', 166]
-let s:vc.orange2  	 			= ['000000', 208]
+let s:vc.clownfish 	 			= ['FA9302', 166]
+let s:vc.gold  	 				= ['FAB802', 208]
 
-let s:vc.brightred 	 			= ['fade3e', 196]
-let s:vc.tomato 	 			= ['fade3e', 160]
-let s:vc.archlinux   			= ['ffa724', 45]
+let s:vc.blood 	 				= ['FF0000', 196]
+let s:vc.tomato 	 			= ['D40000', 160]
+let s:vc.archlinux   			= ['1CCCFC', 45]
 
-let s:vc.mud 		 			= ['f4cf86', 186]
-let s:vc.dinosaur 		 		= ['f4cf86', 192]
+let s:vc.desert 		 		= ['FAE79D', 186]
+let s:vc.pine 		 			= ['F5FCC5', 192]
 
-let s:vc.commanderkp 		 	= ['f4cf86', 58]
-let s:vc.army1 		 			= ['f4cf86', 65]
-let s:vc.army2 		 			= ['f4cf86', 101]
-let s:vc.army3 	  	 			= ['f4cf86', 187]
+let s:vc.commanderkp 		 	= ['94AB00', 58]
+let s:vc.mold 		 			= ['008C59', 65]
+let s:vc.terradactyl 		 	= ['7B914A', 101]
+let s:vc.afghan 	  	 		= ['B5C299', 187]
 
-let s:vc.aqua 		 			= ['aeee00', 87]
-let s:vc.brightyellow			= ['88633f', 220]
+let s:vc.aqua 		 			= ['00FFF2', 87]
+let s:vc.brightyellow			= ['E5FF00', 220]
 
 " }}}
 " CATCH BLACK BACKGROUND {{{
@@ -118,23 +118,23 @@ call s:HL('VertSplit', 'mac', 'bg', 'none')
 call s:HL('CursorLine',   '', 'tile', 'none')
 call s:HL('CursorColumn', '', 'tile')
 call s:HL('ColorColumn',  '', 'tile')
-call s:HL('MatchParen', 'brightred', 'offblack', 'bold')
+call s:HL('MatchParen', 'blood', 'offblack', 'bold')
 call s:HL('NonText',    'tank', 'bg')
 call s:HL('SpecialKey', 'tank', 'bg')
 call s:HL('Visual',    '',  'tank')
 call s:HL('VisualNOS', '',  'tank')
-call s:HL('Search',    'brightred', 'coal', 'bold')
+call s:HL('Search',    'blood', 'coal', 'bold')
 call s:HL('IncSearch', 'tomato', 'coal',    'bold')
 call s:HL('Underlined', 'fg', '', 'underline')
 call s:HL('StatusLine',   'rhino', 'archlinux',     'bold')
-call s:HL('StatusLineNC', 'brightred', 'tank', 'bold')
-call s:HL('Directory', 'orange1', '', 'bold')
-call s:HL('Title', 'orange1')
+call s:HL('StatusLineNC', 'blood', 'tank', 'bold')
+call s:HL('Directory', 'clownfish', '', 'bold')
+call s:HL('Title', 'clownfish')
 call s:HL('ErrorMsg',   'palepurple',       'bg', 'bold')
-call s:HL('MoreMsg',    'brightred',   '',   'bold')
-call s:HL('ModeMsg',    'army3', '',   'bold')
-call s:HL('Question',   'army3', '',   'bold')
-call s:HL('WarningMsg', 'brightred',       '',   'bold')
+call s:HL('MoreMsg',    'blood',   '',   'bold')
+call s:HL('ModeMsg',    'afghan', '',   'bold')
+call s:HL('Question',   'afghan', '',   'bold')
+call s:HL('WarningMsg', 'blood',       '',   'bold')
 " This is a ctags tag, not an HTML one.  'Something you can use c-] on'.
 call s:HL('Tag', '', '', 'bold')
 
@@ -161,7 +161,7 @@ call s:HL('Special', 'tokyowhite')
 call s:HL('Comment', 'sneaker', 'coal')
 call s:HL('Todo',           'tokyowhite', 'bg', 'bold')
 call s:HL('SpecialComment', 'tokyowhite', 'bg', 'bold')
-call s:HL('String', 'army3')
+call s:HL('String', 'afghan')
 call s:HL('Statement',   'palepurple', '', 'bold')
 call s:HL('Keyword',     'palepurple', '', 'bold')
 call s:HL('Conditional', 'palepurple', '', 'bold')
@@ -174,7 +174,7 @@ call s:HL('Function',   'purpleghost', '', 'none')
 
 call s:HL('PreProc',   'archlinux', '', 'none')
 call s:HL('Macro',     'archlinux', '', 'none')
-call s:HL('Define',    'orange2', '', 'none')  "php functions in here
+call s:HL('Define',    'gold', '', 'none')  "php functions in here
 call s:HL('PreCondit', 'tank', '', 'bold')
 
 " Constants of all kinds are colored together.
@@ -183,11 +183,11 @@ call s:HL('Constant',  'archlinux', '', 'bold')
 call s:HL('Character', 'archlinux', '', 'bold')
 call s:HL('Boolean',   'archlinux', '', 'bold')
 
-call s:HL('Number', 'orange1', '', 'bold')
-call s:HL('Float',  'orange1', '', 'bold')
-call s:HL('SpecialChar', 'orange1', '', 'bold')
+call s:HL('Number', 'clownfish', '', 'bold')
+call s:HL('Float',  'clownfish', '', 'bold')
+call s:HL('SpecialChar', 'clownfish', '', 'bold')
 
-call s:HL('Type', 'orange1', '', 'none')
+call s:HL('Type', 'clownfish', '', 'none')
 call s:HL('StorageClass', 'palepurple', '', 'none')
 call s:HL('Structure', 'palepurple', '', 'none')
 call s:HL('Typedef', 'palepurple', '', 'bold')
@@ -195,14 +195,14 @@ call s:HL('Typedef', 'palepurple', '', 'bold')
 call s:HL('Exception', 'aqua', '', 'bold')
 
 " Misc
-call s:HL('Error',  'tokyowhite',   'brightred', 'bold')
+call s:HL('Error',  'tokyowhite',   'blood', 'bold')
 call s:HL('Debug',  'tokyowhite',   '',      'bold')
 call s:HL('Ignore', 'crane', '',      '')
 
 " }}}
 " COMPLETION MENU {{{
 call s:HL('Pmenu', 'commanderkp', 'offblack')
-call s:HL('PmenuSel', 'brightred', 'coal')
+call s:HL('PmenuSel', 'blood', 'coal')
 call s:HL('PmenuSbar', '', 'shuttle')
 call s:HL('PmenuThumb', 'archlinux')
 " COMPLETION MENU {{{
@@ -217,16 +217,16 @@ call s:HL('DiffText',   'tokyowhite', 'sneaker', 'bold')
 " }}}
 " SPELLING {{{
 if has("spell")
-	call s:HL('SpellCap', 'brightred', 'bg', 'undercurl,bold', 'brightred')
-	call s:HL('SpellBad', 'rhino', '', 'undercurl', 'orange1')
-	call s:HL('SpellLocal', '', '', 'undercurl', 'brightred')
-	call s:HL('SpellRare', '', '', 'undercurl', 'brightred')
+	call s:HL('SpellCap', 'blood', 'bg', 'undercurl,bold', 'blood')
+	call s:HL('SpellBad', 'rhino', '', 'undercurl', 'clownfish')
+	call s:HL('SpellLocal', '', '', 'undercurl', 'blood')
+	call s:HL('SpellRare', '', '', 'undercurl', 'blood')
 endif
 " }}}
 " }}}
 " PLUGINS {{{
 " CTRLP {{{
-call s:HL('CtrlPNoEntries', 'tokyowhite', 'brightred', 'bold')
+call s:HL('CtrlPNoEntries', 'tokyowhite', 'blood', 'bold')
 call s:HL('CtrlPMatch', 'purpleghost', 'bg', 'none')
 call s:HL('CtrlPLinePre', 'tank', 'bg', 'none')
 
@@ -291,26 +291,26 @@ call s:HL('clojureDefine',   'palepurple', '', '')
 call s:HL('clojureMacro',    'palepurple', '', '')
 call s:HL('clojureCond',     'palepurple', '', '')
 call s:HL('clojureKeyword', 'purpleghost', '', 'none')
-call s:HL('clojureFunc',   'brightred', '', 'none')
-call s:HL('clojureRepeat', 'brightred', '', 'none')
+call s:HL('clojureFunc',   'blood', '', 'none')
+call s:HL('clojureRepeat', 'blood', '', 'none')
 call s:HL('clojureParen0', 'mac', '', 'none')
 call s:HL('clojureAnonArg', 'tokyowhite', '', 'bold')
 " }}}
 " CSS {{{
-call s:HL('cssColorProp', 'army3', '', 'none')
-call s:HL('cssBoxProp', 'army3', '', 'none')
-call s:HL('cssTextProp', 'army3', '', 'none')
-call s:HL('cssRenderProp', 'army3', '', 'none')
-call s:HL('cssGeneratedContentProp', 'army3', '', 'none')
-call s:HL('cssValueLength', 'army3', '', 'bold')
-call s:HL('cssColor', 'army3', '', 'bold')
+call s:HL('cssColorProp', 'afghan', '', 'none')
+call s:HL('cssBoxProp', 'afghan', '', 'none')
+call s:HL('cssTextProp', 'afghan', '', 'none')
+call s:HL('cssRenderProp', 'afghan', '', 'none')
+call s:HL('cssGeneratedContentProp', 'afghan', '', 'none')
+call s:HL('cssValueLength', 'afghan', '', 'bold')
+call s:HL('cssColor', 'afghan', '', 'bold')
 call s:HL('cssBraces', 'mac', '', 'none')
 call s:HL('cssIdentifier', 'purpleghost', '', 'bold')
 call s:HL('cssClassName', 'purpleghost', '', 'none')
 " }}}
 " Diff {{{
 call s:HL('gitDiff', 'mac', '',)
-call s:HL('diffRemoved', 'brightred', '',)
+call s:HL('diffRemoved', 'blood', '',)
 call s:HL('diffAdded', 'aqua', '',)
 call s:HL('diffFile', 'rhino', 'palepurple', 'bold')
 call s:HL('diffNewFile', 'rhino', 'palepurple', 'bold')
@@ -333,7 +333,7 @@ call s:HL('javaClassDecl', 'palepurple', '', 'bold')
 call s:HL('javaScopeDecl', 'palepurple', '', 'bold')
 call s:HL('javaCommentTitle', 'crane', '')
 call s:HL('javaDocTags', 'tokyowhite', '', 'none')
-call s:HL('javaDocParam', 'brightred', '', '')
+call s:HL('javaDocParam', 'blood', '', '')
 " }}}
 " LessCSS {{{
 call s:HL('lessVariable', 'aqua', '', 'none')
@@ -343,11 +343,11 @@ call s:HL('mailSubject', 'purpleghost', '', 'bold')
 call s:HL('mailHeader', 'mac', '', '')
 call s:HL('mailHeaderKey', 'mac', '', '')
 call s:HL('mailHeaderEmail', 'tokyowhite', '', '')
-call s:HL('mailURL', 'army3', '', 'underline')
+call s:HL('mailURL', 'afghan', '', 'underline')
 call s:HL('mailSignature', 'crane', '', 'none')
 call s:HL('mailQuoted1', 'crane', '', 'none')
-call s:HL('mailQuoted2', 'brightred', '', 'none')
-call s:HL('mailQuoted3', 'army1', '', 'none')
+call s:HL('mailQuoted2', 'blood', '', 'none')
+call s:HL('mailQuoted3', 'mold', '', 'none')
 call s:HL('mailQuoted4', 'purpleghost', '', 'none')
 call s:HL('mailQuoted5', 'aqua', '', 'none')
 
@@ -365,30 +365,30 @@ call s:HL('markdownH3', 'aqua', '', 'none')
 call s:HL('markdownH4', 'aqua', '', 'none')
 call s:HL('markdownH5', 'aqua', '', 'none')
 call s:HL('markdownH6', 'aqua', '', 'none')
-call s:HL('markdownLinkText', 'army3', '', 'underline')
-call s:HL('markdownIdDeclaration', 'army3')
-call s:HL('markdownAutomaticLink', 'army3', '', 'bold')
-call s:HL('markdownUrl', 'army3', '', 'bold')
+call s:HL('markdownLinkText', 'afghan', '', 'underline')
+call s:HL('markdownIdDeclaration', 'afghan')
+call s:HL('markdownAutomaticLink', 'afghan', '', 'bold')
+call s:HL('markdownUrl', 'afghan', '', 'bold')
 call s:HL('markdownUrldelimiter', 'mac', '', 'bold')
 call s:HL('markdownLinkDelimiter', 'mac', '', 'bold')
 call s:HL('markdownLinkTextDelimiter', 'mac', '', 'bold')
-call s:HL('markdownCodeDelimiter', 'army2', '', 'bold')
-call s:HL('markdownCode', 'army2', '', 'none')
-call s:HL('markdownCodeBlock', 'army2', '', 'none')
+call s:HL('markdownCodeDelimiter', 'terradactyl', '', 'bold')
+call s:HL('markdownCode', 'terradactyl', '', 'none')
+call s:HL('markdownCodeBlock', 'terradactyl', '', 'none')
 " }}}
 " PHP {{{
-call s:HL('phpRegionDelimiter', 'brightred', '', 'bold') " php tags
-call s:HL('phpPropertySelector', 'orange1', '', 'bold')
-call s:HL('phpPropertySelectorInString', 'orange1', '', 'bold')
-call s:HL('phpOperator', 'orange1', '', 'bold')
-call s:HL('phpArrayPair', 'brightred', '', 'bold')
-call s:HL('phpAssignByRef', 'brightred', '', 'bold')
-call s:HL('phpRelation', 'brightred', '', 'bold') "need to check
-call s:HL('phpMemberSelector', 'orange1', '', 'bold')
-call s:HL('phpUnknownSelector', 'orange1', '', 'bold')
-call s:HL('phpVarSelector', 'purple5', '', 'bold')
+call s:HL('phpRegionDelimiter', 'blood', '', 'bold') " php tags
+call s:HL('phpPropertySelector', 'clownfish', '', 'bold')
+call s:HL('phpPropertySelectorInString', 'clownfish', '', 'bold')
+call s:HL('phpOperator', 'clownfish', '', 'bold')
+call s:HL('phpArrayPair', 'blood', '', 'bold')
+call s:HL('phpAssignByRef', 'blood', '', 'bold')
+call s:HL('phpRelation', 'blood', '', 'bold') "need to check
+call s:HL('phpMemberSelector', 'clownfish', '', 'bold')
+call s:HL('phpUnknownSelector', 'clownfish', '', 'bold')
+call s:HL('phpVarSelector', 'peyote', '', 'bold')
 call s:HL('phpSemicolon', 'mac', '', 'bold')
-call s:HL('phpFunctions', 'orange1', '', 'bold')
+call s:HL('phpFunctions', 'clownfish', '', 'bold')
 call s:HL('phpParent', 'tokyowhite', '', 'bold')
 " }}}
 " RUBY {{{
@@ -401,23 +401,23 @@ call s:HL('rubyAttribute', 'brightyellow', '', 'bold')
 call s:HL('rubyEval', 'brightyellow', '', 'bold')
 call s:HL('rubyException', 'brightyellow', '', 'bold')
 call s:HL('rubyInclude', 'purpleghost', '', 'bold')
-call s:HL('rubyStringDelimiter', 'army2', '', 'bold')
-call s:HL('rubyRegexp', 'army1', '', 'bold')
-call s:HL('rubyRegexpDelimiter', 'army2', '', 'bold')
-call s:HL('rubyConstant', 'orange1', '', 'bold')
+call s:HL('rubyStringDelimiter', 'terradactyl', '', 'bold')
+call s:HL('rubyRegexp', 'mold', '', 'bold')
+call s:HL('rubyRegexpDelimiter', 'terradactyl', '', 'bold')
+call s:HL('rubyConstant', 'clownfish', '', 'bold')
 call s:HL('rubyGlobalVariable', 'brightyellow', '', 'bold')
 call s:HL('rubyClassVariable', 'brightyellow', '', 'bold')
-call s:HL('rubyInstanceVariable', 'army2', '', 'bold')
+call s:HL('rubyInstanceVariable', 'terradactyl', '', 'bold')
 " }}}
 " MySQL {{{
 call s:HL('mysqlSpecial', 'archlinux', '', 'bold')
 " }}}
 " Python {{{
 hi def link pythonOperator Operator
-call s:HL('pythonBuiltin',     'brightred')
-call s:HL('pythonBuiltinObj',  'brightred')
-call s:HL('pythonBuiltinFunc', 'brightred')
-call s:HL('pythonEscape',      'brightred')
+call s:HL('pythonBuiltin',     'blood')
+call s:HL('pythonBuiltinObj',  'blood')
+call s:HL('pythonBuiltinFunc', 'blood')
+call s:HL('pythonEscape',      'blood')
 call s:HL('pythonException',   'aqua', '', 'bold')
 call s:HL('pythonExceptions',  'aqua', '', 'none')
 call s:HL('pythonPrecondit',   'aqua', '', 'none')
@@ -427,10 +427,10 @@ call s:HL('pythonCoding',      'crane', '', 'bold')
 " }}}
 " Vim {{{
 call s:HL('VimCommentTitle', 'mac', '', 'bold')
-call s:HL('VimMapMod',    'brightred', '', 'none')
-call s:HL('VimMapModKey', 'brightred', '', 'none')
-call s:HL('VimNotation', 'brightred', '', 'none')
-call s:HL('VimBracket', 'brightred', '', 'none')
-call s:HL('VimError', 'brightred', '', 'none')
+call s:HL('VimMapMod',    'blood', '', 'none')
+call s:HL('VimMapModKey', 'blood', '', 'none')
+call s:HL('VimNotation', 'blood', '', 'none')
+call s:HL('VimBracket', 'blood', '', 'none')
+call s:HL('VimError', 'blood', '', 'none')
 " }}}
 " }}}
