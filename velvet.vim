@@ -28,9 +28,9 @@ let s:vc.crane 		  		  	= ['B8B6B7', 242] " 4
 let s:vc.shuttle   	  		  	= ['ABA9AA', 240] " 5
 let s:vc.tank     	  		  	= ['757474', 238] " 6 
 let s:vc.sneaker   	  		  	= ['6B6A6A', 236] " 7 
-let s:vc.tile     	  			= ['666565', 235] " 8 
+let s:vc.tile     	  			= ['4A4A48', 235] " 8 
 let s:vc.coal    	  			= ['242321', 233] " 9 
-let s:vc.offblack 		  		= ['333333', 232] " 111 
+let s:vc.offblack 		  		= ['111111', 232] " 111 
 let s:vc.rhino 		  			= ['3D3D3D', 238]  " 000
 let s:vc.pink 		  			= ['FF036C', 197]                          
 
