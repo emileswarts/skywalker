@@ -17,9 +17,9 @@ let g:colors_name = "skywalker"
 "}}}
 " DEFINE COLOURS {{{
 
-"Colors go from dark to light.  1 being the darkest
 "Anything marked as bright yellow (should not be much) is still a work in progress and has not showed up in my testing
 
+"greys
 let s:vc = {}
 let s:vc.tokyowhite 		  	= ['FFFFFF', 15]  " 1
 let s:vc.pidgeon   	  		  	= ['EBE8E9', 252] " 2 
@@ -32,14 +32,16 @@ let s:vc.tile     	  			= ['4A4A48', 235] " 8
 let s:vc.coal    	  			= ['242321', 233] " 9 
 let s:vc.offblack 		  		= ['111111', 232] " 111 
 let s:vc.rhino 		  			= ['3D3D3D', 238]  " 000
-let s:vc.pink 		  			= ['FF036C', 197]                          
 
+"purples
 let s:vc.lipstick      			= ['FF03D9', 201]
 let s:vc.purpleghost      		= ['C003FF', 93]
 let s:vc.palepurple   	 		= ['DA7AFA', 98]
+let s:vc.palestpurple   	 	= ['DA7AFA', 141]
 let s:vc.lotus     				= ['E543FA', 165]
 let s:vc.peyote   	 			= ['CD7CFC', 135]
 let s:vc.lilac   	 			= ['E94AF7', 198]
+let s:vc.pink 		  			= ['FF036C', 197]                          
 
 let s:vc.clownfish 	 			= ['FA9302', 166]
 let s:vc.gold  	 				= ['FAB802', 208]
@@ -135,7 +137,6 @@ call s:HL('MoreMsg',    'blood',   '',   'bold')
 call s:HL('ModeMsg',    'afghan', '',   'bold')
 call s:HL('Question',   'afghan', '',   'bold')
 call s:HL('WarningMsg', 'blood',       '',   'bold')
-" This is a ctags tag, not an HTML one.  'Something you can use c-] on'.
 call s:HL('Tag', '', '', 'bold')
 
 call s:HL('WildMenu', 'tank', '',   'bold')
@@ -143,7 +144,7 @@ call s:HL('IndentGuides', 'tank', '',   'bold')
 
 " }}}
 " BLACKNESS {{{
-call s:HL('LineNr', 'offblack', 'coal')
+call s:HL('LineNr', 'rhino', 'offblack')
 call s:HL('SignColumn', '', s:darkness)
 call s:HL('FoldColumn', 'shuttle', s:darkness)
 
@@ -177,8 +178,6 @@ call s:HL('Macro',     'archlinux', '', 'none')
 call s:HL('Define',    'gold', '', 'none')  "php functions in here
 call s:HL('PreCondit', 'tank', '', 'bold')
 
-" Constants of all kinds are colored together.
-" I'm not really happy with the color yet...
 call s:HL('Constant',  'archlinux', '', 'bold')
 call s:HL('Character', 'archlinux', '', 'bold')
 call s:HL('Boolean',   'archlinux', '', 'bold')
@@ -260,18 +259,6 @@ call s:HL('CtrlPStats', 'rhino', 'archlinux', 'bold')
 
 call s:HL('EasyMotionTarget', 'archlinux',     'bg', 'bold')
 call s:HL('EasyMotionShade',  'tank', 'bg')
-
-" }}}
-" Interesting Words {{{
-
-" These are only used if you're me or have copied the <leader>hNUM mappings
-" from my Vimrc.
-call s:HL('InterestingWord1', 'rhino', 'purpleghost')
-call s:HL('InterestingWord2', 'rhino', 'aqua')
-call s:HL('InterestingWord3', 'rhino', 'palepurple')
-
-" }}}
-" Makegreen {{{
 
 " }}}
 " ShowMarks {{{
@@ -428,8 +415,11 @@ call s:HL('pythonCoding',      'crane', '', 'bold')
 " Vim {{{
 call s:HL('VimCommentTitle', 'mac', '', 'bold')
 call s:HL('VimMapMod',    'blood', '', 'none')
-call s:HL('VimMapModKey', 'blood', '', 'none')
-call s:HL('VimNotation', 'blood', '', 'none')
+call s:HL('VimMapModKey', 'pine', '', 'none')
+call s:HL('VimHiGroup', 'pine', '', 'none')
+call s:HL('VimHiGuiFgBg', 'lipstick', '', 'none')
+call s:HL('VimHiCtermFgBg', 'lipstick', '', 'none')
+call s:HL('VimNotation', 'palepurple', '', 'none')
 call s:HL('VimBracket', 'blood', '', 'none')
 call s:HL('VimError', 'blood', '', 'none')
 " }}}
