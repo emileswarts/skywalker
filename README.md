@@ -1,13 +1,13 @@
-Velvet
+Skywalker
 -------
 
 Maintainer:   Emile Swarts
 Last Change:  2012/10/04
-URL: https://github.com/emileswarts/velvet-vim-colourscheme
+URL: https://github.com/emileswarts/skywalker
 
 ### Skywalker vim colourscheme
 
-This is a dark colourscheme that I made over the course of a month.  I compiled the palette from a colours that just work together.  It consists of a wide range of greys, purples, red for search highlights, aqua blue cursor, army menu completion text, and a complimentary orange here and there.  Inspired(heavily) by (@sjl) [Badwolf](https://github.com/sjl/badwolf) colourscheme.
+This is a dark colourscheme that I made over the course of a month.  I compiled the palette from a colours that just work together.  It consists of a wide range of greys, purples, red for search highlights, aqua blue cursor, army menu completion text, and a complimentary orange here and there.  Heavily inspired by Steve Losh's [Badwolf](https://github.com/sjl/badwolf) colourscheme.
 
 ```
 git clone git@github.com:emileswarts/skywalker.git ~/skywalker
