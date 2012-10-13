@@ -48,6 +48,9 @@ let s:vc.brightred 	 			= ['fade3e', 196]
 let s:vc.tomato 	 			= ['fade3e', 160]
 let s:vc.archlinux   			= ['ffa724', 45]
 
+let s:vc.mud 		 			= ['f4cf86', 186]
+let s:vc.dinosaur 		 		= ['f4cf86', 192]
+
 let s:vc.commanderkp 		 	= ['f4cf86', 58]
 let s:vc.army1 		 			= ['f4cf86', 65]
 let s:vc.army2 		 			= ['f4cf86', 101]
@@ -140,7 +143,7 @@ call s:HL('IndentGuides', 'tank', '',   'bold')
 
 " }}}
 " BLACKNESS {{{
-call s:HL('LineNr', 'rhino', 'offblack')
+call s:HL('LineNr', 'offblack', 'coal')
 call s:HL('SignColumn', '', s:darkness)
 call s:HL('FoldColumn', 'shuttle', s:darkness)
 
@@ -182,8 +185,6 @@ call s:HL('Boolean',   'archlinux', '', 'bold')
 
 call s:HL('Number', 'orange1', '', 'bold')
 call s:HL('Float',  'orange1', '', 'bold')
-
-" Not sure what 'special character in a constant' means, but let's make it pop.
 call s:HL('SpecialChar', 'orange1', '', 'bold')
 
 call s:HL('Type', 'orange1', '', 'none')
@@ -191,7 +192,6 @@ call s:HL('StorageClass', 'palepurple', '', 'none')
 call s:HL('Structure', 'palepurple', '', 'none')
 call s:HL('Typedef', 'palepurple', '', 'bold')
 
-" Make try/catch blocks stand out.
 call s:HL('Exception', 'aqua', '', 'bold')
 
 " Misc
@@ -201,10 +201,11 @@ call s:HL('Ignore', 'crane', '',      '')
 
 " }}}
 " COMPLETION MENU {{{
-call s:HL('Pmenu', 'tokyowhite', 'tile')
+call s:HL('Pmenu', 'commanderkp', 'offblack')
 call s:HL('PmenuSel', 'brightred', 'coal')
 call s:HL('PmenuSbar', '', 'shuttle')
 call s:HL('PmenuThumb', 'archlinux')
+" COMPLETION MENU {{{
 
 
 " }}}
